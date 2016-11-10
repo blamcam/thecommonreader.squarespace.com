@@ -1,0 +1,181 @@
+<!doctype html>
+<html {.if authenticatedAccount}data-authenticated-account{.end}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1">
+
+    {squarespace-headers}
+  </head>
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if website.logoImageUrl} has-logo-image{.or} has-site-title{.end}{.if website.siteTagLine} has-tagline{.end}{.if website.socialAccounts.0} has-social{.end}{.if showCart} has-cart{.end}{.if item}{.or}{.equal? collection.typeName "index"}{.section collection}{.repeated section collections}{.background-source-video?} has-parallax-images{.or}{.if mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.or}{.section collection}{.background-source-video?} has-parallax-images{.or}{.if mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.end} enable-load-effects" sqs-controller="NavigationState">
+
+    {@|apply mobile.block}
+
+    {.equal? collection.typeName "index"}
+      <div class="Parallax-host" data-parallax-host>
+        {.section collection}
+          {.repeated section collections}
+            {.background-source-video?}
+              <div class="Parallax-item" data-parallax-item data-parallax-id="{id}"></div>
+            {.end}
+            {.if mainImage}
+              <div class="Parallax-item" data-parallax-item data-parallax-id="{id}"></div>
+            {.end}
+          {.end}
+        {.end}
+      </div>
+
+    {.or}
+
+      {.if item}{.or}
+        {.section collection}
+          {.background-source-video?}
+            <div class="Parallax-host" data-parallax-host>
+              <div class="Parallax-item" data-parallax-item data-parallax-id="{id}"></div>
+            </div>
+          {.end}
+          {.if mainImage}
+            <div class="Parallax-host" data-parallax-host>
+              <div class="Parallax-item" data-parallax-item data-parallax-id="{id}"></div>
+            </div>
+          {.end}
+        {.end}
+      {.end}
+    {.end}
+
+    <div class="Site sqs-announcement-bar-dropzone" data-nc-base="header" data-nc-min="640" data-nc-collapsible sqs-controller="Ancillary">
+
+      <header class="Header Header--top">
+        <div class="Header-inner Header-inner--top" data-nc-group="top">
+          <div data-nc-container="top-left">
+
+            <div class="Header-search" data-nc-element="search">
+              <form class="Header-search-form" action="/search" method="get">
+                <input class="Header-search-form-input" name="q" type="text" spellcheck="false" value="" autocomplete="off" placeholder="Search" />
+                <button class="Header-search-form-submit" type="submit" data-test="template-search">
+                  <svg class="Icon Icon--search--small" viewBox="0 0 20 20">
+                    <use xlink:href="/assets/ui-icons.svg#search-icon--small"></use>
+                  </svg>
+                  <svg class="Icon Icon--search" viewBox="0 0 20 20">
+                    <use xlink:href="/assets/ui-icons.svg#search-icon"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+          </div>
+          <div data-nc-container="top-center">
+            {.if website.socialAccounts.0}
+              <div class="Header-social" data-nc-element="social">
+                {@|apply social-links.block}
+              </div>
+            {.end}
+          </div>
+          <div data-nc-container="top-right">
+
+            {@|apply cart.block}
+
+          </div>
+        </div>
+      </header>
+
+      <div class="Site-inner{.equal? collection.typeName "index"} Site-inner--index{.end}"{.equal? collection.typeName "index"}{.section collection} sqs-controller="Parallax{.section collections.0}{.background-source-video?}, OverlayOffset{.or}{.if mainImage}, OverlayOffset{.end}{.end}{.end}"{.end}{.or}{.if item}{.or}{.section collection}{.background-source-video?} sqs-controller="OverlayOffset, Parallax"{.or}{.if mainImage} sqs-controller="OverlayOffset, Parallax"{.end}{.end}{.end}{.end}{.end}>
+
+        <header class="Header Header--bottom{.if item}{.or}{.equal? collection.typeName "index"}{.section collection}{.section collections.0}{.background-source-video?} Header--overlay{.or}{.if mainImage} Header--overlay{.or}{.equal? typeName "gallery"} Header--overlay{.end}{.end}{.end}{.end}{.end}{.or}{.section collection}{.background-source-video?} Header--overlay{.or}{.if mainImage} Header--overlay{.end}{.end}{.end}{.end}{.end}">
+          <div class="Header-inner Header-inner--bottom" data-nc-group="bottom">
+            <div data-nc-container="bottom-left">
+              <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation">
+                <squarespace:navigation navigationId="mainNavigation" template="header-nav" />
+              </nav>
+            </div>
+            <div data-nc-container="bottom-center">
+
+              <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
+                {.section website}
+                  {.section logoImageUrl}
+                    <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
+                  {.or}
+                    {siteTitle}
+                  {.end}
+                {.end}
+              </a>
+              {.section website}{.section siteTagLine}<div class="Header-tagline" data-nc-element="tagline">{@}</div>{.end}{.end}
+
+            </div>
+            <div data-nc-container="bottom-right">
+
+              <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
+                <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
+              </nav>
+
+            </div>
+          </div>
+        </header>
+
+
+
+        {.if collection}{.if item}{.or}{.equal? collection.typeName "index"}{.or}
+          {.equal? collection.typeName "page"}
+            {.section collection}
+              {.background-source-video?}
+                <section class="Intro Intro--has-image" data-parallax-original-element data-parallax-id="{id}">
+                  <squarespace:block-field id="{id}_intro" class="Intro-content sqs-alternate-block-style-container" columns="12" label="Intro" />
+                  <figure class="Intro-image" data-parallax-image-wrapper>
+                    {@|apply sqs-video-background.block}
+                  </figure>
+                </section>
+              {.or}
+                {.if mainImage}
+                  <section class="Intro Intro--has-image" data-parallax-original-element data-parallax-id="{id}">
+                    <squarespace:block-field id="{id}_intro" class="Intro-content sqs-alternate-block-style-container" columns="12" label="Intro" />
+                    {.section mainImage}
+                      <figure class="Intro-image" data-parallax-image-wrapper>
+                        <img {@|image-meta} data-load="false" />
+                      </figure>
+                    {.end}
+                  </section>
+                {.end}
+              {.end}
+            {.end}
+          {.or}
+            <section class="Intro{.section collection}{.background-source-video?} Intro--has-image{.or}{.if mainImage} Intro--has-image{.end}{.end}{.end}" data-parallax-original-element data-parallax-id="{collection.id}">
+              <squarespace:block-field id="{collection.id}_intro" class="Intro-content{.section collection}{.background-source-video?} sqs-alternate-block-style-container{.or}{.if mainImage} sqs-alternate-block-style-container{.end}{.end}{.end}" columns="12" label="Intro" />
+              {.section collection}
+                {.background-source-video?}
+                  <figure class="Intro-image" data-parallax-image-wrapper>
+                    {@|apply sqs-video-background.block}
+                  </figure>
+                {.or}
+                  {.section mainImage}
+                    <figure class="Intro-image" data-parallax-image-wrapper>
+                      <img {@|image-meta} data-load="false" />
+                    </figure>
+                  {.end}
+                {.end}
+              {.end}
+            </section>
+          {.end}
+        {.end}{.end}{.end}
+
+        <main class="{.equal? collection.typeName "index"}Index{.or}Main{.if collection.typeName} Main--{collection.typeName}{.equal? collection.typeName "page"}{.or}{.if item}-item{.or}-list{.end}{.end}{.end}{.end}" {.equal? collection.typeName "index"}data-collection-id="{collection.id}"{.end}>
+          {.equal? collection.typeName "index"}
+            {squarespace.main-content}
+          {.or}
+            <section class="Main-content" data-content-field="main-content">
+              {squarespace.main-content}
+            </section>
+          {.end}
+        </main>
+
+
+      </div>
+
+      {@|apply footer.block}
+
+    </div>
+
+    <script src="/scripts/site-bundle.js"></script>
+
+    {squarespace-footers}
+
+  </body>
+</html>
