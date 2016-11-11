@@ -1,4 +1,3 @@
-
 {.section item}
 
   <article id="article-{id}" class="BlogItem-article {@|item-classes}{.passthrough?} BlogItem-article--passthrough{.end}{.if starred} BlogItem-article--featured{.or} BlogItem-article--not-featured{.end}{.main-image?} BlogItem-article--has-main-image{.or} BlogItem-article--no-main-image{.end}{.if categories.0} has-categories{.end}{.if tags.0} has-tags{.end}{.if location.addressTitle || location.addressLine1 || location.addressLine2 || location.addressCountry} has-location{.end}{.comments?} has-comments{.end}" data-item-id="{id}">
@@ -24,52 +23,6 @@
     </article>
 
 {.end}
-
-
-{.if collection.features.relatedItems.isEnabled}
-  <squarespace:related collectionId="{collection.id}" limit="5" itemId="{item.id}">
-    {.section items}
-      <section class="BlogItem-related">
-
-        <h2 class="BlogItem-related-label"></h2>
-
-        <div class="BlogItem-related-content clear" sqs-controller="Template.Controllers.SimpleImageLoad">
-          {.repeated section @}
-
-
-            <article id="article_{id}" class="BlogList-item{.if categories.0} has-categories{.end}{.if tags.0} has-tags{.end}{.if location.addressTitle || location.addressLine1 || location.addressLine2 || location.addressCountry} has-location{.end}{.comments?} has-comments{.end} loaded" data-item-id="{id}">
-
-              <div class="Blog-header Blog-header--list{.main-image?} Blog-header--has-image{.end}">
-
-                <div class="Blog-header-content">
-
-                  <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="Blog-header-content-link" {.passthrough?}target="_blank"{.end}></a>
-
-                  <div class="Blog-meta Blog-meta--top">{@|apply blog-meta.block}</div>
-
-                  <h2 class="Blog-title" data-content-field="title">{title}</h2>
-
-                  {.excerpt?}
-                    <div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>
-                  {.end}
-
-                  <div class="Blog-meta Blog-meta--bottom">{@|apply blog-meta.block}</div>
-
-                </div>
-
-                {.main-image?}<figure class="Blog-header-image content-fill"><img {@|image-meta} data-load="false" /></figure>{.end}
-
-              </div>
-
-            </article>
-
-          {.end}
-        </div>
-      </section>
-    {.end}
-  </squarespace:related>
-{.end}
-
 
 {.section pagination}
   <nav class="BlogItem-pagination clear" sqs-controller="Template.Controllers.BlogItemPaginationArrows">
