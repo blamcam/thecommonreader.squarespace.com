@@ -21,7 +21,7 @@
     <section id="comments-{id}" class="BlogItem-comments">
         {@|comments}
     </section>
-    </article>
+  </article>
 
 {.end}
 

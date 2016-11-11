@@ -1,3 +1,5 @@
+{.repeated section items}
+
 {.section item}
 
   <article id="article-{id}" class="BlogItem-article {@|item-classes}{.passthrough?} BlogItem-article--passthrough{.end}{.if starred} BlogItem-article--featured{.or} BlogItem-article--not-featured{.end}{.main-image?} BlogItem-article--has-main-image{.or} BlogItem-article--no-main-image{.end}{.if categories.0} has-categories{.end}{.if tags.0} has-tags{.end}{.if location.addressTitle || location.addressLine1 || location.addressLine2 || location.addressCountry} has-location{.end}{.comments?} has-comments{.end}" data-item-id="{id}">
@@ -20,10 +22,9 @@
     <section id="comments-{id}" class="BlogItem-comments">
         {@|comments}
     </section>
-    </article>
+  </article>
 
 {.end}
-
 {.section pagination}
   <nav class="BlogItem-pagination clear" sqs-controller="Template.Controllers.BlogItemPaginationArrows">
 
@@ -68,4 +69,6 @@
     {.end}
 
   </nav>
+{.end}
+
 {.end}
