@@ -5,6 +5,7 @@
 
 
     <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
+    <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
     {.excerpt?}
       <div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>
     {.end}
