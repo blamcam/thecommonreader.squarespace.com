@@ -12,7 +12,6 @@
     {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>
     {.end}
     <div class="col sqs-col-12 span-12" data-layout-label="Post Body" data-type="item" data-updated-on="{updatedOn}" id="item-{id}">{body}</div>
-    <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
     <div class="BlogItem-share">
       <div class="Share sqs-share-buttons" data-item-identifier="{id}" data-item-path="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}">
         <div class="Share-buttons" id="yui_{id}">{@|apply sqs-share-buttons}</div>
