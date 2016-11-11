@@ -1,0 +1,147 @@
+{.section categoryFilter}
+<p class="active-filter category-filter"><span class="active-filter-label">{@|safe}</span></p>
+{.end}
+
+{.section tagFilter}
+<p class="active-filter tag-filter"><span class="active-filter-label">{@|safe}</span></p>
+{.end}
+
+{.if authorFilter}
+<p class="active-filter author-filter"><span class="active-filter-label">{author.displayName|safe}</span></p>
+{.end}
+
+<!--Category and Tag items List-->
+{.if categoryFilter || tagFilter || authorFilter}
+<section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
+  <squarespace:query collection="blog" category="{categoryFilter}" tag="{tagFilter}" author="{authorFilter}" limit="99" >
+  {.repeated section items}
+  <ul>
+    <li>
+      <span class="dated">{addedOn|date %d-%m-%y}</span>
+        <p>
+          {.passthrough?}
+            <a href="{sourceUrl}">{title} <span>&rarr;</span></a>
+          {.or}
+            <a href="{fullUrl}">{title}</a>
+          {.end}
+        </p>
+      </li>
+    </ul>
+    {.end}
+  </squarespace:query>
+</section>
+{.or}
+
+<section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
+
+{.repeated section items}
+
+<article class="{@|item-classes}" id="article-{id}" data-item-id="{id}">
+
+  <!--SPECIAL CONTENT-->
+
+  {.section promotedBlock}
+    <div class="special-content">{@}</div>
+  {.end}
+
+
+  <!--POST HEADER-->
+
+      {.passthrough?}
+        <a href="{sourceUrl}" class="BlogList-item-title" data-content-field="title">{title} <span>&rarr;</span></a>
+      {.or}
+        <a href="{fullUrl}" class="BlogList-item-title" data-content-field="title">{title}</a>
+      {.end}
+
+  <!--POST BODY-->
+  {.excerpt?}
+    {.if promotedBlock}{.or}
+      {.main-image?}
+        <div class="main-image">
+          <img {@|image-meta}>
+        </div>
+        <style>.main-image img { width: 100%; }</style>
+      {.end}
+    {.end}
+    <div class="body entry-content excerpt">{excerpt}</div>
+  {.end}
+  {.section body}<div class="BlogList-item-body">{@}</div>{.end}
+
+  <!--POST FOOTER-->
+
+    <div class="post-item-injection">{postItemInjectCode}</div>
+    <div class="entry-info">
+      {.passthrough?}{.or}{.section sourceUrl}Source: <span class="attribution"><a href="{sourceUrl}" class="source-link" target="_blank">{sourceUrl}</a></span>{.end}{.end}
+      {.section tags}<span class="tags">Tags: {.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}#show-archive" rel="tag">{@}</a>{.alternates with}, {.end}</span>{.end}
+    </div>
+    <div class="entry-info">
+      <span class="published"><a href="{fullUrl}" title="Permalink" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %d %B %Y}</time></a></span>&nbsp;|&nbsp;{.if categories}<span class="category">{.repeated section categories}<a href="{collection.fullUrl}?category={@}" rel="tag">{@}</a>{.alternates with}, {.end}</span>{.end}
+    </div>
+
+    <div class="Blog-meta BlogList-item-meta">
+        <!--Categories-->
+        {.if categories}<span class="Blog-meta-item Blog-meta-item--categories">{.repeated section categories}<a href="{collection.fullUrl}?category={@}" class="Blog-meta-item-category">{@}</a>{.alternates with}, {.end}</span>{.end}
+        <!--Author-->
+        <a href="/?author=57ca0926ff7c508975c7cddd" class="Blog-meta-item Blog-meta-item--author">{@}</a>
+        <!--Date-->
+        <time class="Blog-meta-item Blog-meta-item--date" datetime="{addedOn|date %F}">{addedOn|date %d %B %Y}</time>
+        <!--Tags-->
+        {.section tags}<span class="Blog-meta-item Blog-meta-item--tags">{.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}#show-archive" class="Blog-meta-item-tag">{@}</a>{.alternates with}, {.end}</span>{.end}
+    </div>
+
+
+  </article>
+  <div class="post-divider"></div>
+
+  {.end}
+
+</section>
+
+<!--PAGINATION-->
+{.section pagination}
+<nav class="blog-item-pagination clear">
+{.section prevItem}<a href="{fullUrl}" class="BlogItem-pagination-link BlogItem-pagination-link--prev">
+<svg class="BlogItem-pagination-link-icon" viewBox="0 0 23 48">
+  <g class="svg-icon">
+    <polyline fill="none" stroke-miterlimit="10" points="21.5,1.3 2.6,23.4 21.5,45.7 "></polyline>
+  </g>
+</svg>
+<div class="BlogItem-pagination-link-content">
+  <div class="BlogItem-pagination-link-label">Previous</div>
+  <h4 class="BlogItem-pagination-link-title">
+    <span class="pagination-title-wrapper">
+      <time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>
+      {title}
+    </span>
+  </h4>
+  <div class="BlogItem-pagination-link-meta">{@|apply blog-meta-pagination.block}</div>
+</div>
+<!---->
+<svg class="BlogItem-pagination-link-icon" viewBox="0 0 23 48">
+  <g class="svg-icon">
+    <polyline fill="none" stroke-miterlimit="10" points="1.5,45.7 20.4,23.5 1.5,1.3 "></polyline>
+  </g>
+</svg>
+</a>{.or}{.end}
+<!---->
+{.section nextItem}<a href="{fullUrl}" class="BlogItem-pagination-link BlogItem-pagination-link--next">
+  <div class="BlogItem-pagination-link-content">
+    <div class="BlogItem-pagination-link-label">Next</div>
+    <h4 class="BlogItem-pagination-link-title">
+      <span class="pagination-title-wrapper">
+        <time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>
+        {title}
+      </span>
+    </h4>
+    <div class="BlogItem-pagination-link-meta">{@|apply blog-meta-pagination.block}</div>
+  </div>
+  <!---->
+  <svg class="BlogItem-pagination-link-icon" viewBox="0 0 23 48">
+    <g class="svg-icon">
+      <polyline fill="none" stroke-miterlimit="10" points="1.5,45.7 20.4,23.5 1.5,1.3 "></polyline>
+    </g>
+  </svg>
+</a>
+</nav>
+{.end}
+{.end}
