@@ -173,8 +173,12 @@
 
     </div>
 
-    <script src="/scripts/site-bundle.js"></script>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <squarespace:script src="site-bundle.js" combo="true"></script>
+    <squarespace:script src="bigfoot.js" combo="true"></script>
+    <script type="text/javascript">
+      $.bigfoot();
+    </script>
     {squarespace-footers}
 
   </body>
