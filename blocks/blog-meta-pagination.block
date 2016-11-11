@@ -1,4 +1,4 @@
-{.section categories
-}<!--Categories-->
+{.section categories}
+<!--Categories-->
 <span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--categories">{.repeated section @}{@}{.alternates with}, {.end}</span>{.end}
 {.end}
