@@ -13,11 +13,11 @@
       {body}
     </div>
     <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
-    {@|apply sqs-share-buttons}
+    <div class="Share-buttons" id="yui_{id}">{@|apply sqs-share-buttons}</div>
     {.if postItemInjectCode}{postItemInjectCode}{.end}
-    <div id="comments-{id}" class="BlogItem-comments">
+    <section id="comments-{id}" class="BlogItem-comments">
         {@|comments}
-      </div>
+    </section>
     </article>
   {.end}
 
