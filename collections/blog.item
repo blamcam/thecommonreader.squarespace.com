@@ -82,7 +82,6 @@
           <div class="BlogItem-pagination-link-label">Previous</div>
           <h4 class="BlogItem-pagination-link-title">
             <span class="pagination-title-wrapper">
-              <time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e}</time>
               {title}
             </span>
           </h4>
@@ -97,7 +96,6 @@
           <div class="BlogItem-pagination-link-label">Next</div>
           <h4 class="BlogItem-pagination-link-title">
             <span class="pagination-title-wrapper">
-              <time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>
               {title}
             </span>
           </h4>
