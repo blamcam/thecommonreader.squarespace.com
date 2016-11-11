@@ -98,33 +98,30 @@
 </section>
 
 <!--PAGINATION-->
-  {.section pagination}
-    <nav class="BlogItem-pagination clear" sqs-controller="Template.Controllers.BlogItemPaginationArrows">
-
-      {.section prevItem}
-        <a href="{.if passthrough}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogItem-pagination-link BlogItem-pagination-link--prev">
-          <svg class="Icon Icon--caretSmall--left BlogItem-pagination-icon" viewBox="0 0 9 16">
-            <use xlink:href="/assets/ui-icons.svg#caret-left-small-icon"></use>
-          </svg><!--
-          --><div class="BlogItem-pagination-content">
-            <h4 class="BlogItem-pagination-title">{title}</h4>
-            <div class="BlogItem-pagination-meta">{@|apply blog-meta-pagination.block}</div>
-          </div>
-        </a>
-      {.end}
-
-      {.section nextItem}
-        <a href="{.if passthrough}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogItem-pagination-link BlogItem-pagination-link--next">
-          <div class="BlogItem-pagination-content">
-            <h4 class="BlogItem-pagination-title">{title}</h4>
-            <div class="BlogItem-pagination-meta">{@|apply blog-meta-pagination.block}</div>
-          </div><!--
-          --><svg class="Icon Icon--caretSmall--right BlogItem-pagination-icon" viewBox="0 0 9 16">
-            <use xlink:href="/assets/ui-icons.svg#caret-right-small-icon"></use>
-          </svg>
-        </a>
-      {.end}
-
-    </nav>
-  {.end}
+{.section pagination}
+<section class="blog-item-pagination">
+{.section prevItem}<a href="{fullUrl}" class="blog-item-pagination-link blog-item-pagination-link--prev">
+  <div class="blog-item-label">
+    <svg class="prev-icon" viewBox="0 0 50 100">
+      <use xlink:href="/assets/ui-icons.svg#thick-arrow-left-icon"></use>
+    </svg>
+  </div>
+  <span class="pagination-title-wrapper">
+    {.main-image?}<img {@|image-meta} />{.end}
+    <h2 class="blog-item-pagination-title"><time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}</h2>
+  </span>
+</a>{.or}{.end}<!--
+-->{.section nextItem}<a href="{fullUrl}" class="blog-item-pagination-link blog-item-pagination-link--next">
+  <div class="blog-item-label">
+    <svg class="next-icon" viewBox="0 0 50 100">
+      <use xlink:href="/assets/ui-icons.svg#thick-arrow-right-icon"></use>
+    </svg>
+  </div>
+  <span class="pagination-title-wrapper">
+    {.main-image?}<img {@|image-meta} />{.end}
+    <h2 class="blog-item-pagination-title"><time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}</h2>
+  </span>
+</a>{.or}{.end}
+</section>
+{.end}
 {.end}
