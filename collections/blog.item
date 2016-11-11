@@ -5,11 +5,12 @@
 
 
     <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
-    {.excerpt?}
-      <div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>
-    {.end}
-    {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
     <div class="col sqs-col-12 span-12" data-layout-label="Post Body" data-type="item" data-updated-on="1473220480260" id="item-{id}">
+      {.excerpt?}
+        <div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>
+      {.end}
+      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>
+      {.end}
       {body}
     </div>
     <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
