@@ -15,7 +15,51 @@
 {.end}
 </section>
 
-<!-- pagination -->
-{.if pagination}
-{.section pagination}@{.end}
-{.end}
+<nav class="BlogList-pagination">
+
+
+      <a href="/?offset=1462074840990&amp;reversePaginate=true" class="BlogList-pagination-link">
+        <svg class="BlogList-pagination-link-icon" viewBox="0 0 9 16">
+          <g class="svg-icon">
+            <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2 "></polyline>
+          </g>
+        </svg><span class="BlogList-pagination-link-label">Newer</span>
+      </a><a href="/?offset=1462074840990" class="BlogList-pagination-link">
+        <span class="BlogList-pagination-link-label">Older</span><svg class="BlogList-pagination-link-icon" viewBox="0 0 9 16">
+          <g class="svg-icon">
+            <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7 "></polyline>
+          </g>
+        </svg>
+      </a>
+
+
+  </nav>
+
+
+  {.if pagination}
+    <nav class="BlogList-pagination">
+
+      <!-- newer page -->
+      {.if pagination.prevPage}
+        <a href="{pagination.prevPageUrl}" class="BlogList-pagination-link">
+          <svg class="BlogList-pagination-link-icon" viewBox="0 0 9 16">
+            <g class="svg-icon">
+              <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2 "></polyline>
+            </g>
+          </svg><span class="BlogList-pagination-link-label">Newer</span>
+        </a>
+      {.end}
+
+      <!-- older page -->
+      {.if pagination.nextPage}
+        <a href="{pagination.nextPageUrl}" class="BlogList-pagination-link">Older<span class="BlogList-pagination-link-label">Older</span>
+          <svg class="BlogList-pagination-link-icon" viewBox="0 0 9 16">
+          <g class="svg-icon">
+            <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7 "></polyline>
+          </g>
+        </svg>
+      </a>
+      {.end}
+
+    </nav>
+  {.end}
