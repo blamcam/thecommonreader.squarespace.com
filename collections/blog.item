@@ -6,7 +6,7 @@
 
     <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
     <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
-      {.excerpt?}<div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
+      {.excerpt?}<div class="BlogItem-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
       {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
     {.section body}{@}{.end}
     <div class="BlogItem-share">

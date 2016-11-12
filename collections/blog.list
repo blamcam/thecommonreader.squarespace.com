@@ -5,7 +5,7 @@
     <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-item-title" data-content-field="title">{title}</a>
 
     <div class="BlogList-item-body">
-      {.excerpt?}<div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
+      {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
       {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
       {body}
     </div>
