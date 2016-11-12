@@ -31,7 +31,7 @@
 
     <!-- older page -->
     {.if pagination.nextPage}
-      <a href="{pagination.nextPageUrl}" class="BlogList-pagination-link">Older<span class="BlogList-pagination-link-label">Older</span>
+      <a href="{pagination.nextPageUrl}" class="BlogList-pagination-link"><span class="BlogList-pagination-link-label">Older</span>
         <svg class="BlogList-pagination-link-icon" viewBox="0 0 9 16">
         <g class="svg-icon">
           <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7 "></polyline>
