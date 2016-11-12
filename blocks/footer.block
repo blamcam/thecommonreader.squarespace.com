@@ -1,4 +1,3 @@
-{.equal? collection.typeName "blog"}<squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />{.end}
 <footer class="Footer" role="contentinfo" sqs-controller="FooterBreakpoints">
 
   <div class="Footer-inner clear">
@@ -44,6 +43,7 @@
 
       <squarespace:block-field id="footerBlocksMiddle" class="Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="Footer Middle Blocks" />
 
+      {.equal? collection.typeName "blog"}<squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />{.end}
     </div>
 
     <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Footer Bottom Blocks" />
