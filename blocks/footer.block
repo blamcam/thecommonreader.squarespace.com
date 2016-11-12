@@ -1,4 +1,4 @@
-<squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
+{.equal? collection.typeName "blog"}<squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />{.end}
 <footer class="Footer" role="contentinfo" sqs-controller="FooterBreakpoints">
 
   <div class="Footer-inner clear">
