@@ -6,7 +6,7 @@
 
     {squarespace-headers}
   </head>
-  <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if website.logoImageUrl} has-logo-image{.or} has-site-title{.end}{.if website.siteTagLine} has-tagline{.end}{.if website.socialAccounts.0} has-social{.end}{.if showCart} has-cart{.end}{.if item}{.or}{.equal? collection.typeName "index"}{.section collection}{.repeated section collections}{.background-source-video?} has-parallax-images{.or}{.if mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.or}{.section collection}{.background-source-video?} has-parallax-images{.or}{.if mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.end} enable-load-effects" sqs-controller="NavigationState">
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if website.socialLogoImageUrl} has-logo-image{.or} has-site-title{.end}{.if website.siteTagLine} has-tagline{.end}{.if website.socialAccounts.0} has-social{.end}{.if showCart} has-cart{.end}{.if item}{.or}{.equal? collection.typeName "index"}{.section collection}{.repeated section collections}{.background-source-video?} has-parallax-images{.or}{.if mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.or}{.section collection}{.background-source-video?} has-parallax-images{.or}{.if mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.end} enable-load-effects" sqs-controller="NavigationState">
 
     {@|apply mobile.block}
 
@@ -92,7 +92,7 @@
               <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
                 {.section website}
                   {.section logoImageUrl}
-                    <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
+                    <img src="{socialLogoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
                   {.or}
                     {siteTitle}
                   {.end}
