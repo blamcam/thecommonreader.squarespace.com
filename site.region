@@ -92,7 +92,7 @@
               <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
                 {.section website}
                   {.section logoImageUrl}
-                    <img src="{socialLogoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
+                    <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
                   {.or}
                     {siteTitle}
                   {.end}
