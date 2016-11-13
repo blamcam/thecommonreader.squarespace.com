@@ -47,7 +47,7 @@
     </div>
 
     <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Footer Bottom Blocks" />
-    
+
     <div data-nc-container="bottom-center">
 
       <a href="/" class="footer-branding" data-nc-element="branding" data-content-field="site-title">
@@ -59,6 +59,6 @@
       </a>
 
     </div>
-
+    
   </div>
 </footer>
