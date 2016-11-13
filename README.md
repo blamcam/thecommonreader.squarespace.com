@@ -1,70 +1,51 @@
-# myronrodrigues.com
+<p align="center"><img src ="https://support.squarespace.com/hc/en-us/article_attachments/207780587/wells-livepreview.png" /></p>
 
-> Jekyll theme for myronrodrigues.com
+A customization of the [Wells](http://wells-demo.squarespace.com) Squarespace template for [myronrodrigues.com](http://myronrodrigues.com).
+In __Developer Mode__ this template can be uploaded to a Squarespace GIT repo.
 
-This theme for Jekyll uses __Jekyllized__ as detailed below in a similar way to [LittleBooks](littlebooks.github.io)
+### Resources
+- See the [Wells Squarespace Guide](https://support.squarespace.com/hc/en-us/articles/206545647-Using-the-Wells-template) for base features and functions.
+- For more information about the Squarespace Developer Platform see [developers.squarespace.com](http://developers.squarespace.com).
+- See the [Developer Getting Started](https://developers.squarespace.com/getting-started) page for an step-by-step guide for getting started with the Squaresapce Developer Platform.
 
-## Introduction
+## About Squarespace templates
+Squarespace templates contain regular web files like CSS and JavaScript. In addition, Squarespace recognizes a few special file types:
 
-`generator-jekyllized`[https://github.com/sondr3/generator-jekyllized] is a very opinionated [Yeoman][yeoman] generator built with [Jekyll][jekyll] and [gulp][gulp].
+#### JSON-T Template Files
 
-## Installation
+Squarespace template files are written in [JSON Template](https://developers.squarespace.com/what-is-json-t), also known as JSON-T. It is a simple yet expressive template language. JSON-T files have different extensions depending on the type of file, for example `.list`, `.item`, and `.region`.
 
-### Node.js
-In the site folder, switch over to the latest node.
-```
-$ nvm use 5.9.1
-```
-### Install Dependancies
-NOTE: these dependancies get installed to the 5.9.1 node and hence will be utilised every time you "use" the version of Node via NVM.
-* **Ruby**: `>2.0` with Bundler `>1.10`
-* **Node**: `>4.2`, Gulp `>4.0` and Yo `>1.7.0`
-* **Gulp:** Since the beta is running Gulp 4.0 you need to install `gulp-cli`:
-  `npm install gulpjs/gulp-cli#4.0 -g`
-* **Jekyllized:** Then install Jekyllized: `npm install
-  generator-jekyllized@next -g`
+#### LESS Files
 
-### Configure Yeoman
-In the __installation folder__
-```
-$ yo jekyllized
-```
-## To get started
+Template LESS files (.less) are processed through the [LESS](http://lesscss.org/) preprocessor. LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.
 
-```
-$ gulp [--prod]
-```
-And you'll have a new Jekyll site generated for you and displayed in your
-browser. Neato. If you want to run it with production settings, just add
-`--prod`.
+### Template Folder Structure
 
-Clean and rebuild during testing...
-```
-$ gulp clean
-$ gulp rebuild
-```
+Squarespace template files are organized using the following folder structure at the root of your site:
 
-## Committing and deploying
+- **assets**: design assets — example: images, fonts and icons
+- **blocks**: reusable blocks of JSON-T (AKA partials) — ex: navigation.block
+- **collections**: collection files — [collection].list, [collection].item, [collection].conf
+- **scripts**: Javascript files — site.js
+- **styles**: stylesheet files — styles.css, styles.less
+- [**root**]: sitewide files — site.region, template.conf
 
-### Github
-NOTE: You may have to add the ssh key before SSHing into Github
+### Essential Files
 
-```
-$ ssh-add ~/.ssh/gh_rsa
-```
-This repository is synchronised to the remote repo https://github.com/myronrodrigues/myronrodrigues.com.git
+At the very minimum, your template needs a `.region` file and a `template.conf`.
 
-```
-$ git add .
-$ git commit -m "removed forced HTTPS"
-$ git push origin master
-```
-### Amazon AWS
-```
-$ gulp deploy
-```
-This will use [`gulp-awspublish`][awspublish] and the AWS credentials in the aws-credentials.json file.
+#### /site.region
 
-## Owner
+Typically this file is used as the global site template – containing the site header, footer, and sidebars. This is like the `index.html` of your site. Every template must have at least one `.region` file. Simple templates will have a single `.region`, more advanced templates will have multiple `.region` files describing header, body, and footer variants. Regions files live in the root directory of a template.
 
-> [Myron Rodrigues](myronrodrigues.com)
+See the [Layouts & Regions documentation](https://developers.squarespace.com/layouts-regions/) for more details.
+
+#### /template.conf
+
+Contains the configuration settings for the template. This is where you can name your template, specify layouts, add navigation sections, specify stylesheets, and other general site options. Template configuration files must live in the root directory of a template.
+
+See the [Template Configuration documentation](https://developers.squarespace.com/template-configuration/) for more details.
+
+### Further Reading
+
+For further reading please consult the [Squarespace Template Overview](https://developers.squarespace.com/template-overview/) and other documentation on the Squarespace developers website.
