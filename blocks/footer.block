@@ -47,6 +47,18 @@
     </div>
 
     <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Footer Bottom Blocks" />
-    
+
+    <div>
+
+      <a href="/" class="footer-branding" data-nc-element="branding" data-content-field="site-title">
+        {.section website}
+          {.section socialLogoImageUrl}
+            <img src="{socialLogoImageUrl}?format=1500w" alt="{siteTitle}" class="footer-branding-logo" />
+          {.end}
+        {.end}
+      </a>
+
+    </div>
+
   </div>
 </footer>
