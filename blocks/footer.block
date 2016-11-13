@@ -50,7 +50,7 @@
 
     <div>
 
-      <a href="/" class="footer-branding" data-nc-element="branding" data-content-field="site-title">
+      <a href="/" class="footer-branding">
         {.section website}
           {.section socialLogoImageUrl}
             <img src="{socialLogoImageUrl}?format=1500w" alt="{siteTitle}" class="footer-branding-logo" />
