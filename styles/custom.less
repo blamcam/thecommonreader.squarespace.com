@@ -5,64 +5,82 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: @tweak-heading-margin!important;
-    margin-bottom: @tweak-heading-margin!important;
+    margin-top: @tweak-heading-margin !important;
+    margin-bottom: @tweak-heading-margin !important;
 }
 
 main p {
-  margin-top: @tweak-main-paragraph-padding!important;
-  margin-bottom: @tweak-main-paragraph-padding!important;
+    margin-top: @tweak-main-paragraph-padding !important;
+    margin-bottom: @tweak-main-paragraph-padding !important;
 }
 
 .sqs-block-form {
-  float: none!important;
-  text-align: center!important;
-  .field-element {
-      max-width: 200px!important;
-  }
-  label.title {
-    display: none!important;
-  }
+    float: none!important;
+    text-align: center!important;
+
+    .field-element {
+        max-width: 200px!important;
+    }
+
+    label.title {
+        display: none!important;
+    }
 }
 
 footer .sqs-block-content p {
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
 }
 
 nav.Footer-nav {
-  //background-color: @tweak-main-background-color;
+    //background-color: @tweak-main-background-color;
 }
 
-
-.summary-title, .summary-metadata-container {
-  display: inline-block!important;
+.summary-metadata-container,
+.summary-title {
+    display: inline-block!important;
 }
 
 .sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
-  margin-bottom: 0px !important;
-  padding-bottom: 5px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 5px !important;
 }
 
 .summary-metadata-item {
-  .tweak-footer-nav-font;
-  text-transform: uppercase!important;
-  font-size: 10px!important;
+    .tweak-footer-nav-font;
+    text-transform: uppercase!important;
+    font-size: 10px!important;
 }
 
-.summary-metadata-container--below-title, .summary-metadata-container--below-content {
-  display:none!important;
+.summary-metadata-container--below-content,
+.summary-metadata-container--below-title {
+    display: none!important;
 }
 
 .Footer-bottom {
-  text-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .footer-branding-logo {
     max-width: @tweak-footer-logo-width;
+}
+
+input[type=email] {
+    transition-duration: 0.3s;
+    padding: 0!important;
+    font-style: italic;
+    background: transparent!important;
+    height: 40px!important;
+    width: 250px!important;
+    border: 0!important;
+    color: @tweak-body-text-color;
+    text-align: center;
+    border-bottom: solid 1px darken(@tweak-footer-color, 75%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
