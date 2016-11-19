@@ -8,7 +8,7 @@
     <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
       {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
       {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
-    {.section body}{@}{.end}
+    {body}
     {.section categories}
     <div class="blog-categories">
       <ul class="tags">
