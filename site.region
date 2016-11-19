@@ -182,19 +182,13 @@
                 {.or}
 
                   <div class="BlogList-filter-heading{.section categoryFilter} BlogList-filter-heading--category{.end}{.section tagFilter} BlogList-filter-heading--tag{.end}">
-                    {.section categoryFilter}{@|safe}{.end}{.section tagFilter}{@|safe}{.end}
+                    {.section categoryFilter}{@|safe}{.end}{.section tagFilter}{.repeated section items}<a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-item-title" data-content-field="title">{title}</a><{.end}{.end}
                   </div>
 
                 {.end}
 
               </div>
             {.end}
-
-            <div class="BlogList-inner clear">
-
-              {squarespace.main-content}
-
-            </div>
 
             <a href="#" class="BlogList-load"></a>
           </div>
