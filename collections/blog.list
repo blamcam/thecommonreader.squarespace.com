@@ -15,8 +15,7 @@
  {.if categoryFilter}
  <section class="Main-content" data-content-field="main-content">
    <section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
-     <div class="articles sqs-block">
-       <div class="BlogList-item-body">
+     <div class="sqs-block articles">
          <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
          {.repeated section items}
            <ul>
@@ -29,7 +28,6 @@
            </ul>
          {.end}
          </squarespace:query>
-       </div>
      </div>
    </section>
  </section>
