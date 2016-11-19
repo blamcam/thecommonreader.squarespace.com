@@ -11,7 +11,7 @@
  {.if categoryFilter}
  <section class="Main-content" data-content-field="main-content">
    <div class="articles tweak-site-width-option-full-background tweak-site-width-option-constrained-width">
-     {.section categoryFilter}<p class="active-filter category-filter">All posts tagged: <span class="active-filter-label">{@|safe}</span></p>{.end}
+     {.section categoryFilter}<div><h2>All posts tagged</h2></div><div><h1>{@|safe}</h1></div>{.end}
      <ul>
        <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
        {.repeated section items}
