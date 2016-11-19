@@ -11,7 +11,6 @@
 {.end}
 
 <section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
-{.repeated section items}
 <!--Category and Tag items List-->
  {.if categoryFilter || tagFilter}
  <div class="article-list hfeed">
@@ -33,6 +32,7 @@
    </squarespace:query>
  </div>
  {.or}
+ {.repeated section items}
   <article id="post-{id}" class="BlogList-item hentry post-type-text article-index-1{.if categories.0} has-categories{.end}{.if tags.0} has-tags{.end}{.if location.addressTitle || location.addressLine1 || location.addressLine2 || location.addressCountry} has-location{.end}{.comments?} has-comments{.end}" data-item-id="{id}" data-offset="{addedOn}"{.if pagination.nextPage}{.or} data-last-page{.end}>
     <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-item-title" data-content-field="title">{title}</a>
 
