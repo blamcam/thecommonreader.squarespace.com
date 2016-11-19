@@ -14,7 +14,7 @@
 <!--Category and Tag items List-->
  {.if categoryFilter}
  <section class="Main-content" data-content-field="main-content">
-       <div class="responsive-content-inset-width articles">
+       <div class="csqs-block-content articles">
          <ul>
            <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
            {.repeated section items}
