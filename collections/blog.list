@@ -14,20 +14,22 @@
 <!--Category and Tag items List-->
  {.if categoryFilter}
  <section class="Main-content" data-content-field="main-content">
-   <div class="articles">
-   <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
-   {.repeated section items}
-     <ul>
-       <li>
-         <a href="{fullUrl}">
-           <div class="hed">{title}</div>
-         </a>
-         <div class="postdate">{addedOn|date %d-%m-%y}</div>
-       </li>
-     </ul>
-   {.end}
-   </squarespace:query>
- </div>
+   <section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
+     <div class="articles">
+       <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
+       {.repeated section items}
+         <ul>
+           <li>
+             <a href="{fullUrl}">
+               <div class="hed">{title}</div>
+             </a>
+             <div class="postdate">{addedOn|date %d-%m-%y}</div>
+           </li>
+         </ul>
+       {.end}
+       </squarespace:query>
+     </div>
+   </section>
  </section>
  {.or}
  {.if tagFilter}
