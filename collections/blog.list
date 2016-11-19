@@ -15,19 +15,21 @@
  {.if categoryFilter}
  <section class="Main-content" data-content-field="main-content">
    <section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
-     <div class="sqs-block articles">
-         <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
-         {.repeated section items}
-           <ul>
-             <li>
-               <a href="{fullUrl}">
-                 <div class="hed">{title}</div>
-               </a>
-               <div class="postdate">{addedOn|date %d-%m-%y}</div>
-             </li>
-           </ul>
-         {.end}
-         </squarespace:query>
+     <div class="col sqs-col-12 span-12">
+       <div class="sqs-block articles">
+           <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
+           {.repeated section items}
+             <ul>
+               <li>
+                 <a href="{fullUrl}">
+                   <div class="hed">{title}</div>
+                 </a>
+                 <div class="postdate">{addedOn|date %d-%m-%y}</div>
+               </li>
+             </ul>
+           {.end}
+           </squarespace:query>
+       </div>
      </div>
    </section>
  </section>
