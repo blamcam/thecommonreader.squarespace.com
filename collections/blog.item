@@ -5,7 +5,17 @@
 
 
     <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
+    <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
+      {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
+      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
     {.section body}{@}{.end}
+    {.section categories}
+    <div class="blog-categories">
+      <ul class="tags">
+        {.repeated section @}<li><a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a></li>{.end}
+      </ul>
+    </div>
+    {.end}
   </article>
 
 {.end}
