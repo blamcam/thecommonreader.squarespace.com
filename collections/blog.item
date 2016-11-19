@@ -5,26 +5,21 @@
     <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
     <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
       {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
-      <!-- main image (thumbnail) -->
-      {.main-image?}
-        <a href="{fullUrl}" class="main-image content-fill">
-          <img {@|image-meta} />
-        </a>
-      {.end}
-      {body}
-      {.section categories}
-      <div class="blog-categories">
-        <ul class="tags">
-          {.repeated section @}<li><a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a></li>{.end}
-        </ul>
-      </div>
-      {.end}
-      <div class="BlogItem-share">{@|apply sqs-share-buttons}</div>
-      {.if postItemInjectCode}{postItemInjectCode}{.end}
-      <section id="comments-{id}" class="BlogItem-comments">
-          {@|comments}
-      </section>
-    </article>
+      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
+    {body}
+    {.section categories}
+    <div class="blog-categories">
+      <ul class="tags">
+        {.repeated section @}<li><a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a></li>{.end}
+      </ul>
+    </div>
+    {.end}
+    <div class="BlogItem-share">{@|apply sqs-share-buttons}</div>
+    {.if postItemInjectCode}{postItemInjectCode}{.end}
+    <section id="comments-{id}" class="BlogItem-comments">
+        {@|comments}
+    </section>
+  </article>
 
 {.end}
 
