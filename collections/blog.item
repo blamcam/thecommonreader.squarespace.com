@@ -16,11 +16,7 @@
       </ul>
     </div>
     {.end}
-    <div class="BlogItem-share">
-      <div class="Share sqs-share-buttons" data-item-identifier="{id}" data-item-path="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}">
-        <div class="Share-buttons" id="yui_{id}">{@|apply sqs-share-buttons}</div>
-      </div>
-    </div>
+    {@|apply sqs-share-buttons}
     {.if postItemInjectCode}{postItemInjectCode}{.end}
     <section id="comments-{id}" class="BlogItem-comments">
         {@|comments}
