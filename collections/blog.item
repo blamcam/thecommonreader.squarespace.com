@@ -10,7 +10,10 @@
       {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
     {.section body}{@}{.end}
     {.section categories}
-    <div class="blog-meta-item blog-categories">{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a>{.alternates with}<span class="blog-meta-delimiter">, </span>{.end}
+    <div class="Blog-meta BlogItem-meta blog-categories">
+      <ul class="tags">
+        {.repeated section @}<li><a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a></li>{.end}
+      </ul>
     </div>
     {.end}
     <div class="BlogItem-share">

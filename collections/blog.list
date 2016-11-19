@@ -1,9 +1,9 @@
 {.section categoryFilter}
-<p class="active-filter category-filter"><span class="active-filter-label">{@|safe}</span></p>
+<p class="active-filter category-filter">All posts tagged: <span class="active-filter-label">{@|safe}</span></p>
 {.end}
 
 {.section tagFilter}
-<p class="active-filter tag-filter"><span class="active-filter-label">{@|safe}</span></p>
+<p class="active-filter tag-filter">All posts tagged: <span class="active-filter-label">{@|safe}</span></p>
 {.end}
 
 {.if authorFilter}
