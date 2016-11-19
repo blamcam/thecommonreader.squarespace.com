@@ -161,33 +161,29 @@ ul.tags {
   margin-left: auto;
   .heading {
     text-align: center;
-    text-transform: uppercase;
   }
   ul {
       padding: 5px 0 0 0!important;
       list-style: none;
       li {
-          font-size: .85em;
           line-height: 1.4em;
           margin: 0 0 35px 0;
           padding: 0 0 35px 0;
-          border-bottom: 1px solid #EEEEEE;
+          border-bottom: 1px solid @tweak-site-border-color;
           &:last-child {
               border-bottom: none;
               margin: 0;
               padding: 0;
           }
           &:nth-child( - n + 3) a {
-              font-size: 1.5em;
               line-height: 1.4em;
           }
       }
   }
   .postdate {
     font-style: normal;
-    color: #9E9E9E;
+    color: lighten(@tweak-body-text-color, 75%);
     text-transform: uppercase;
-    font-size: .45em;
     line-height: 1.4em;
     letter-spacing: .2em;
     font-weight: 400;
