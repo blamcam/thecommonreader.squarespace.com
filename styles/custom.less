@@ -116,34 +116,35 @@ input[type=email] {
     padding: 0 0 5px 0;
     font-size: .55em;
     line-height: 1.4em;
-    ul.tags {
-        width: 100%;
-        max-width: 700px;
-        margin: 0 auto;
-        &:before {
-            content: "Tags: ";
-            text-transform: uppercase;
-            letter-spacing: .02em;
-            color: #BDBDBD;
-            margin: 0 4px 0 0;
-            font-weight: 600;
+}
+
+ul.tags {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    &:before {
+        content: "Tags: ";
+        text-transform: uppercase;
+        letter-spacing: .02em;
+        color: #BDBDBD;
+        margin: 0 4px 0 0;
+        font-weight: 600;
+    }
+    li {
+        display: inline-block;
+        text-transform: uppercase;;
+        border: 1px solid #E0E0E0;
+        background-color: #FFFFFF;
+        border-radius: 3px;
+        padding: 1px 6px 0 6px;
+        margin: 0 2px 5px 0;
+        white-space: nowrap;
+        a {
+            color: #757575;
         }
-        li {
-            display: inline-block;
-            text-transform: uppercase;;
-            border: 1px solid #E0E0E0;
-            background-color: #FFFFFF;
-            border-radius: 3px;
-            padding: 1px 6px 0 6px;
-            margin: 0 2px 5px 0;
-            white-space: nowrap;
-            a {
-                color: #757575;
-            }
-            &:hover {
-                background-color: #FAFAFA;
-                border-color: #BDBDBD;
-            }
+        &:hover {
+            background-color: #FAFAFA;
+            border-color: #BDBDBD;
         }
     }
 }
