@@ -1,25 +1,13 @@
-<!-- Show active filters -->
 {.section categoryFilter}
-<p class="filter-heading filter-by-category loading" sqs-controller="FadeInContent">
-  All in <span class="category-name">{@}</span>
-</p>
+<p class="active-filter category-filter"><span class="active-filter-label">{@|safe}</span></p>
 {.end}
 
 {.section tagFilter}
-<p class="filter-heading filter-by-tag loading" sqs-controller="FadeInContent">
-  All tagged <span class="category-name">{@}</span>
-</p>
+<p class="active-filter tag-filter"><span class="active-filter-label">{@|safe}</span></p>
 {.end}
 
 {.if authorFilter}
-<div class="filter-heading filter-by-author loading" sqs-controller="FadeInContent">
-  <p>All by {author.displayName}</p>
-  {.if author.avatarId}
-  <div class="author-avatar content-fill">
-    <img class="author-avatar-image" data-src="{author.avatarAssetUrl}" data-image="{author.avatarAssetUrl}" data-image-focal-point="0.5,0.5">
-  </div>
-  {.end}
-</div>
+<p class="active-filter author-filter"><span class="active-filter-label">{author.displayName|safe}</span></p>
 {.end}
 
 <section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
