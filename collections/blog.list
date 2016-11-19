@@ -1,6 +1,5 @@
 {.section categoryFilter}
 <p class="active-filter category-filter"><span class="active-filter-label">{@|safe}</span></p>
-{.repeated section items}<a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-item-title" data-content-field="title">{title}</a><{.end}
 {.end}
 
 {.section tagFilter}
