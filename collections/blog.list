@@ -14,7 +14,7 @@
 <!--Category and Tag items List-->
  {.if categoryFilter || tagFilter}
  <div class="article-list hfeed">
-   <squarespace:query collection="blog" {.if categoryFilter}category="{categoryFilter}"{.or}tag="{tagFilter}"{.end} limit="99" >
+   <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
    {.repeated section items}
    <ul>
      <li>
