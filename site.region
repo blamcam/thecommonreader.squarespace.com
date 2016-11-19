@@ -160,7 +160,7 @@
           {.equal? collection.typeName "index"}
             {squarespace.main-content}
           {.or}
-          {.section collection}{.equal? typeName "products"}{.section categories}
+          {.equal? categoryFilter}{.section categories}
 					    <div id="categoryNav" role="navigation">
 					      <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
 					      <label for="categoryNavToggle" class="category-nav-toggle-label" onclick></label>
@@ -174,7 +174,7 @@
 					        </ul>
 					      </nav>
 					    </div>
-					    {.end}{.end}{.end}
+					    {.end}{.end}
             {.or}
             <section class="Main-content" data-content-field="main-content">
               {squarespace.main-content}
