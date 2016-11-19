@@ -160,22 +160,48 @@
           {.equal? collection.typeName "index"}
             {squarespace.main-content}
           {.or}
-          {.equal? categoryFilter}{.section categories}
-					    <div id="categoryNav" role="navigation">
-					      <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
-					      <label for="categoryNavToggle" class="category-nav-toggle-label" onclick></label>
-					      <nav class="category-nav">
-					        <ul class="nav category-nav-links">
-					          <li class="filter"><a>Filter{.if categoryFilter}: {categoryFilter}{.end}</a></li>
-					          <li{.if categoryFilter}{.or} class="active-link all"{.end}><a href="{fullUrl}">All</a><span class="delimiter">/</span></li>
-					        {.repeated section @}
-					          <li{.equal? categoryFilter @} class="active-link"{.end}><a href="{fullUrl}?category={@|url-encode}">{@}</a><span class="delimiter">/</span></li>
-					        {.end}
-					        </ul>
-					      </nav>
-					    </div>
-					    {.end}{.end}
-            {.or}
+          <div class="BlogList" sqs-controller="Template.Controllers.BlogList">
+
+            {.if categoryFilter || tagFilter || authorFilter}
+              <div class="BlogList-filter">
+
+                {.if authorFilter}
+
+                  {.section author}
+                    {.if avatarId}
+                      <div class="BlogList-filter-avatar content-fill" sqs-controller="Template.Controllers.SimpleImageLoad">
+                        <img class="BlogList-filter-avatar-image" data-src="{avatarAssetUrl}" data-image="{avatarAssetUrl}" data-image-focal-point="0.5,0.5" data-load="false">
+                      </div>
+                    {.end}
+
+                    {.section displayName}<div class="BlogList-filter-heading BlogList-filter-heading--author">{@}</div>{.end}
+
+                    {.section bio}<div class="BlogList-filter-body">{@}</div>{.end}
+                  {.end}
+
+                {.or}
+
+                  <div class="BlogList-filter-heading{.section categoryFilter} BlogList-filter-heading--category{.end}{.section tagFilter} BlogList-filter-heading--tag{.end}">
+                    {.section categoryFilter}{@|safe}{.end}{.section tagFilter}{@|safe}{.end}
+                  </div>
+
+                {.end}
+
+              </div>
+            {.end}
+
+            <div class="BlogList-inner clear">
+
+              {squarespace.main-content}
+
+            </div>
+
+            <a href="#" class="BlogList-load"></a>
+          </div>
+
+        {.end}
+
+      {.or}
             <section class="Main-content" data-content-field="main-content">
               {squarespace.main-content}
             </section>
