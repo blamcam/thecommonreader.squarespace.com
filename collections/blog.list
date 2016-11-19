@@ -16,7 +16,7 @@
        <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
        {.repeated section items}
        <li>
-         <div class="postdate">{addedOn|date %d-%m-%y}</div>
+         <div class="postdate">{addedOn|date %B %d, %Y}</div>
          <a href="{fullUrl}">
            <div class="hed">{title}</div>
          </a>
