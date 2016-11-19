@@ -16,7 +16,7 @@
       </ul>
     </div>
     {.end}
-    {@|apply sqs-share-buttons}
+    <div class="BlogItem-share">{@|apply sqs-share-buttons}</div>
     {.if postItemInjectCode}{postItemInjectCode}{.end}
     <section id="comments-{id}" class="BlogItem-comments">
         {@|comments}
