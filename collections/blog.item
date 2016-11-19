@@ -9,13 +9,6 @@
       {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
       {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
     {.section body}{@}{.end}
-    {.section categories}
-    <div class="blog-categories">
-      <ul class="tags">
-        {.repeated section @}<li><a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a></li>{.end}
-      </ul>
-    </div>
-    {.end}
     <div class="BlogItem-share">
       <div class="Share sqs-share-buttons" data-item-identifier="{id}" data-item-path="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}">
         <div class="Share-buttons" id="yui_{id}">{@|apply sqs-share-buttons}</div>
