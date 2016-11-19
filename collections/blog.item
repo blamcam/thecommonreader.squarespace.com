@@ -1,27 +1,30 @@
 
 {.section item}
 
-  <article id="article-{id}" class="BlogItem-article {@|item-classes}{.passthrough?} BlogItem-article--passthrough{.end}{.if starred} BlogItem-article--featured{.or} BlogItem-article--not-featured{.end}{.main-image?} BlogItem-article--has-main-image{.or} BlogItem-article--no-main-image{.end}{.if categories.0} has-categories{.end}{.if tags.0} has-tags{.end}{.if location.addressTitle || location.addressLine1 || location.addressLine2 || location.addressCountry} has-location{.end}{.comments?} has-comments{.end}" data-item-id="{id}">
-
-
+  <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
     <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
     <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
       {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
-      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
-    {body}
-    {.section categories}
-    <div class="blog-categories">
-      <ul class="tags">
-        {.repeated section @}<li><a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a></li>{.end}
-      </ul>
-    </div>
-    {.end}
-    <div class="BlogItem-share">{@|apply sqs-share-buttons}</div>
-    {.if postItemInjectCode}{postItemInjectCode}{.end}
-    <section id="comments-{id}" class="BlogItem-comments">
-        {@|comments}
-    </section>
-  </article>
+      <!-- main image (thumbnail) -->
+      {.main-image?}
+        <a href="{fullUrl}" class="main-image content-fill">
+          <img {@|image-meta} />
+        </a>
+      {.end}
+      {body}
+      {.section categories}
+      <div class="blog-categories">
+        <ul class="tags">
+          {.repeated section @}<li><a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a></li>{.end}
+        </ul>
+      </div>
+      {.end}
+      <div class="BlogItem-share">{@|apply sqs-share-buttons}</div>
+      {.if postItemInjectCode}{postItemInjectCode}{.end}
+      <section id="comments-{id}" class="BlogItem-comments">
+          {@|comments}
+      </section>
+    </article>
 
 {.end}
 
