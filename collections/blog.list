@@ -2,6 +2,9 @@
 {.section categoryFilter}
 <p class="filter-heading filter-by-category loading" sqs-controller="FadeInContent">
   All in <span class="category-name">{@}</span>
+  {.repeated section items}
+  <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-item-title" data-content-field="title">{title}</a>
+  {.end}
 </p>
 {.end}
 
