@@ -127,25 +127,25 @@ ul.tags {
       content: "Tags: ";
       text-transform: uppercase;
       letter-spacing: .02em;
-      color: #BDBDBD;
+      color: @tweak-body-text-color;
       margin: 0 4px 0 0;
       font-weight: 600;
   }
   li {
       display: inline-block;
       text-transform: uppercase;;
-      border: 1px solid #E0E0E0;
-      background-color: #FFFFFF;
+      border: 1px solid @tweak-site-border-color;
+      background-color: @tweak-site-body-background-color;
       border-radius: 3px;
       padding: 1px 6px 0 6px;
       margin: 0 2px 5px 0;
       white-space: nowrap;
       a {
-          color: #757575;
+          color: @tweak-link-color;
       }
       &:hover {
-          background-color: #FAFAFA;
-          border-color: #BDBDBD;
+          background-color: darken(@tweak-site-body-background-color, 25%);
+          border-color: darken(@tweak-site-body-background-color, 25%);
       }
   }
 }
@@ -181,6 +181,7 @@ ul.tags {
       }
   }
   .postdate {
+    .tweak-footer-nav-font;
     font-style: normal;
     color: lighten(@tweak-body-text-color, 50%);
     text-transform: uppercase;
