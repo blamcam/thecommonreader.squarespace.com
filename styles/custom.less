@@ -146,7 +146,12 @@ ul.tags {
 
 /* Category List */
 .articles {
-  @extend .responsive-content-inset-width;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: @tweak-site-width;
+  margin-right: auto;
+  margin-left: auto
   ul {
       padding: 5px 0 0 0!important;
       list-style: none;

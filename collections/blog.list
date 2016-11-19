@@ -15,7 +15,7 @@
  {.if categoryFilter}
  <section class="Main-content" data-content-field="main-content">
        <div class="tweak-blog-list-style-stacked BlogList--posts-full sqs-layout sqs-col-12">
-         <div class="sqs-block articles">
+         <div class="articles responsive-content-inset-width">
            <ul>
              <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
              {.repeated section items}
