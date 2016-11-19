@@ -16,6 +16,11 @@
       </ul>
     </div>
     {.end}
+
+    {.if postItemInjectCode}{postItemInjectCode}{.end}
+    <section id="comments-{id}" class="BlogItem-comments">
+        {@|comments}
+    </section>
   </article>
 
 {.end}
