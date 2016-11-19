@@ -16,18 +16,20 @@
  <section class="Main-content" data-content-field="main-content">
    <section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
      <div class="articles">
-       <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
-       {.repeated section items}
-         <ul>
-           <li>
-             <a href="{fullUrl}">
-               <div class="hed">{title}</div>
-             </a>
-             <div class="postdate">{addedOn|date %d-%m-%y}</div>
-           </li>
-         </ul>
-       {.end}
-       </squarespace:query>
+       <div class="BlogList-item-body">
+         <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
+         {.repeated section items}
+           <ul>
+             <li>
+               <a href="{fullUrl}">
+                 <div class="hed">{title}</div>
+               </a>
+               <div class="postdate">{addedOn|date %d-%m-%y}</div>
+             </li>
+           </ul>
+         {.end}
+         </squarespace:query>
+       </div>
      </div>
    </section>
  </section>
