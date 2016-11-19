@@ -16,19 +16,17 @@
  <section class="Main-content" data-content-field="main-content">
    <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
    {.repeated section items}
-   <ul>
-     <li>
-       <span class="dated">{addedOn|date %d-%m-%y}</span>
-         <p>
-           {.passthrough?}
-             <a href="{sourceUrl}">{title} <span>&rarr;</span></a>
-           {.or}
-             <a href="{fullUrl}">{title}</a>
-           {.end}
-         </p>
+   <div class="articles">
+     <ul>
+       <li>
+         <a href="{fullUrl}">
+           <div class="postdate">{addedOn|date %d-%m-%y}</div>
+           <div class="hed">{title}</div>
+         </a>
        </li>
      </ul>
-     {.end}
+   </div>
+   {.end}
    </squarespace:query>
  </section>
  {.or}
