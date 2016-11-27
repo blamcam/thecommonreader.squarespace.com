@@ -1,21 +1,5 @@
-{.section categories}<!--
+{.section author}<{.if item}a href="{collection.fullUrl}?author={author.id}"{.or}div{.end} class="blog-meta-item blog-author">{.if firstName || lastName}{firstName} {lastName}{.or}{displayName}{.end}</{.if item}a{.or}div{.end}>{.end}<!--
 
-Categories
+--><time class="blog-meta-item blog-date dt-published date-highlight" datetime="{publishOn|date %F}" pubdate><span class="blog-date-day--before">{publishOn|date %e}</span><span class="blog-date-month--short">{publishOn|date %b}</span><span class="blog-date-month--long">{publishOn|date %B}</span><span class="blog-date-day--after">{publishOn|date %e}</span><span class="blog-date-year">{publishOn|date %Y}</span></time><!--
 
---><span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--categories">{.repeated section @}{@}{.alternates with}, {.end}</span>{.end}<!--
-
-Author
-
---><span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--author">{author.displayName}</span><!--
-
-Date
-
---><time class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--date" datetime="{addedOn|date %F}">{addedOn|date %B} <span>{addedOn|date %d}, </span>{addedOn|date %Y}</time>{.section location}{.section addressTitle}<!--
-
-Location
-
---><span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--location">{@}</span>{.end}{.end}{.section tags}<!-- 
-
-Tags 
-
---><span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--tags">{.repeated section @}{@}{.alternates with}, {.end}</span>{.end}
+-->{.section categories}<div class="blog-meta-item blog-categories">{.repeated section @}<{.if item}a href="{collection.fullUrl}?category={@|url-encode}"{.or}span{.end} class="blog-category blog-category--{@}">{@}</{.if item}a{.or}span{.end}>{.alternates with}<span class="blog-meta-delimiter">, </span>{.end}</div>{.end}
