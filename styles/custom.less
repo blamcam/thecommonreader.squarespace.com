@@ -194,12 +194,13 @@ ul.tags {
 
 
 /* Blog Tweaks */
-.main {
+.BlogList-item-title {
   a {
-    color: @tweak-blog-link!important;
-    text-decoration: none;
+    color: lighten(@tweak-body-text-color, 50%)!important;
+    text-decoration: none!important;
+    border: none!important
   }
   a:hover, a:focus {
-    color: @tweak-blog-link-active-color!important;
+    color: lighten(@tweak-body-text-color, 50%)!important;
   }
 }
