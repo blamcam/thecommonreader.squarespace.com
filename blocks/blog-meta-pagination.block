@@ -1,21 +1,19 @@
-{.section categories}<!--
+<div class="BlogItem-pagination-link-meta">
+  <!--
 
-Categories
+  Categories
 
---><span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--categories">{.repeated section @}{@}{.alternates with}, {.end}</span>{.end}<!--
+  -->{.section categories}<span class="BlogItem-pagination-link-meta-item BlogItem-pagination-link-meta-item--categories">{.repeated section @}{@}{.alternates with}, {.end}</span>{.end}<!--
 
-Author
+  Author
 
---><span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--author">{author.displayName}</span><!--
+  --><span class="BlogItem-pagination-link-meta-item BlogItem-pagination-link-meta-item--author">{author.displayName}</span><!--
 
-Date
+  Date
 
---><time class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--date" datetime="{addedOn|date %F}">{addedOn|date %B} <span>{addedOn|date %d}, </span>{addedOn|date %Y}</time>{.section location}{.section addressTitle}<!--
+--><time class="BlogItem-pagination-link-meta-item BlogItem-pagination-link-meta-item--date" datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time><!--
 
-Location
+  Tags
 
---><span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--location">{@}</span>{.end}{.end}{.section tags}<!-- 
-
-Tags 
-
---><span class="BlogItem-pagination-meta-item BlogItem-pagination-meta-item--tags">{.repeated section @}{@}{.alternates with}, {.end}</span>{.end}
+-->{.section tags}<span class="BlogItem-pagination-link-meta-item BlogItem-pagination-link-meta-item--tags">{.repeated section @}{@}{.alternates with}, {.end}</span>{.end}
+</div>
