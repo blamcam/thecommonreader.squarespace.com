@@ -87,7 +87,7 @@
               {title}
             </span>
           </h4>
-          <div class="BlogItem-pagination-link-meta">{@|apply blog-meta-pagination.block}</div>
+          <div class="BlogItem-pagination-link-meta">{@|apply blog-meta.block}</div>
         </div>
       </a>
     {.end}
@@ -101,7 +101,7 @@
               {title}
             </span>
           </h4>
-          <div class="BlogItem-pagination-link-meta">{@|apply blog-meta-pagination.block}</div>
+          <div class="BlogItem-pagination-link-meta">{@|apply blog-meta.block}</div>
         </div>
         <!---->
         <svg class="BlogItem-pagination-link-icon" viewBox="0 0 23 48">
