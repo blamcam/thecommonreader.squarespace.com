@@ -76,7 +76,6 @@ input[type=email] {
     font-style: italic!important;
     background: transparent!important;
     height: 40px!important;
-    max-width: 300px!important;
     border: 0!important;
     color: @tweak-body-text-color;
     text-align: center;
@@ -85,8 +84,8 @@ input[type=email] {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.sqs-block-form .field-element {
-  max-width: none!important;
+input[id^="email-"] {
+  max-width: 300px!important;
 }
 
 /* Header-bottom background color tweak */
