@@ -1,6 +1,6 @@
-<p align="center"><img src ="https://support.squarespace.com/hc/en-us/article_attachments/207780587/wells-livepreview.png" /></p>
+<p align="center"><img src ="/screenshot.png" /></p>
 
-A customization of the [Wells](http://wells-demo.squarespace.com) Squarespace template for [myronrodrigues.com](http://myronrodrigues.com).
+A customization of the [Keene](http://keene-demo.squarespace.com) Squarespace template for [rodrigues.ink](http://rodrigues.ink).
 In __Developer Mode__ this template can be uploaded to a Squarespace GIT repo.
 
 ### Resources
