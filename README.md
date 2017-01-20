@@ -1,4 +1,4 @@
-<p align="center"><img src ="/screenshot.png" style="width: 200px;"/></p>
+<p align="center"><img src ="/screenshot.png" style="width: 200px; height: 200px;"/></p>
 
 A customization of the [Keene](http://keene-demo.squarespace.com) Squarespace template for [rodrigues.ink](http://rodrigues.ink).
 In __Developer Mode__ this template can be uploaded to a Squarespace GIT repo.
