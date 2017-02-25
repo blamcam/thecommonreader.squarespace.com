@@ -14,25 +14,6 @@ main p {
     margin-bottom: @tweak-main-paragraph-padding !important;
 }
 
-.sqs-block-form {
-    float: none!important;
-    text-align: center!important;
-
-    .field-element {
-        max-width: 200px!important;
-    }
-
-    label.title {
-        display: none!important;
-    }
-}
-
-footer .sqs-block-content p {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-}
-
 nav.Footer-nav {
     //background-color: @tweak-main-background-color;
 }
@@ -67,25 +48,6 @@ nav.Footer-nav {
 
 .footer-branding-logo {
     max-width: @tweak-footer-logo-width;
-}
-
-input[type=email] {
-    .tweak-body-font!important;
-    transition-duration: 0.3s;
-    padding: 0!important;
-    font-style: italic!important;
-    background: transparent!important;
-    height: 40px!important;
-    border: 0!important;
-    color: @tweak-body-text-color;
-    text-align: center;
-    border-bottom: solid 1px darken(@tweak-footer-color, 75%)!important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-input[id^="email-"].field-element {
-  max-width: 400px!important;
 }
 
 /* Header-bottom background color tweak */
@@ -210,4 +172,36 @@ a.BlogList-item-title, a.summary-title-link, a.BlogItem-pagination-link.BlogItem
   background-color: @tweak-newsletter-color;
   padding-top: @tweak-newsletter-padding;
   padding-bottom: @tweak-newsletter-padding;
+}
+
+.sqs-block-form {
+    float: none!important;
+    text-align: center!important;
+
+    .field-element {
+        max-width: 200px!important;
+    }
+
+    label.title {
+        display: none!important;
+    }
+}
+
+input[type=email] {
+    .tweak-body-font!important;
+    transition-duration: 0.3s;
+    padding: 0!important;
+    font-style: italic!important;
+    background: transparent!important;
+    height: 40px!important;
+    border: 0!important;
+    color: @tweak-body-text-color;
+    text-align: center;
+    border-bottom: solid 1px darken(@tweak-footer-color, 75%)!important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input[id^="email-"].field-element {
+  max-width: 400px!important;
 }
