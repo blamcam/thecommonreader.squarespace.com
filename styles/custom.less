@@ -56,6 +56,17 @@ nav.Footer-nav {
     max-width: @tweak-footer-logo-width;
 }
 
+.Footer .Footer-nav-item:after {
+  content: '|';
+  margin: 0 0 0 15px;
+  font-size: 1.2em;
+  color: #EEEEEE
+}
+.Footer .Footer-nav-item:after:after {
+  content: '';
+  margin: 0
+}
+
 /* Header-bottom background color tweak */
 .Header--bottom, .Intro {
   background-color: @tweak-header-bottom-background-color!important;
