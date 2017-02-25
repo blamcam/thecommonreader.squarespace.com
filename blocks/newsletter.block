@@ -1,0 +1,9 @@
+<div class="newsletter">
+  <div class="News-inner clear">
+    <squarespace:block-field id="newsletterBlocksTop" class="News-blocks News-blocks--top sqs-alternate-block-style-container" columns="12" label="Newsletter Top Blocks" />
+    <div class="News-middle">
+      <squarespace:block-field id="newsletterBlocksMiddle" class="News-blocks News-blocks--middle sqs-alternate-block-style-container" columns="12" label="Newsletter Middle Blocks" />
+    </div>
+    <squarespace:block-field id="newsletterBlocksBottom" class="News-blocks News-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Newsletter Bottom Blocks" />
+  </div>
+</div>
