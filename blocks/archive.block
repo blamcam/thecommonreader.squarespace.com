@@ -1,0 +1,40 @@
+{###############################################################################
+    BLOCK OVERRIDE
+    This file, in conjunction with its `.conf` file,
+    are overriding the Squarespace system default rendering for this block type.
+
+    OBJECT MODEL
+    =>
+
+
+        INDEX, LIST, DROPDOWN
+        blockId:                    string
+        collectionUrlId:            string
+        dropdownTitle:              string
+        groupBy:                    string
+        groups:                     object
+        hasNoCollection:            boolean
+        isDeletedCollection:        boolean
+        layout:                     string
+        multiColumns:               boolean
+        showCount:                  boolean
+        showDate:                   boolean
+        type:                       number
+###############################################################################}
+<section class="Main-content" data-content-field="main-content">
+  <div class="articles tweak-site-width-option-full-background tweak-site-width-option-constrained-width">
+    <div class="heading"><h1>Post Archive</h1></div>{.end}
+    <ul>
+      <squarespace:query collection="blog" limit="99" >
+      {.repeated section items}
+      <li>
+        <div class="postdate">{addedOn|date %B %d, %Y}</div>
+        <a href="{fullUrl}">
+          <div class="hed">{title}</div>
+        </a>
+      </li>
+      {.end}
+      </squarespace:query>
+    </ul>
+  </div>
+</section>
