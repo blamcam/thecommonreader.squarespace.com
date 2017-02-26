@@ -111,4 +111,5 @@
     {.end}
 
   </nav>
+  <div class="archive-link"><a href="/archive">Browse the archive→</a></div>
 {.end}
