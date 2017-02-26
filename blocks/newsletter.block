@@ -1,9 +1,9 @@
-<div class="newsletter">
-  <div class="News-inner clear">
-    <squarespace:block-field id="newsletterBlocksTop" class="News-blocks News-blocks--top sqs-alternate-block-style-container" columns="12" label="Newsletter Top Blocks" />
-    <div class="News-middle">
-      <squarespace:block-field id="newsletterBlocksMiddle" class="News-blocks News-blocks--middle sqs-alternate-block-style-container" columns="12" label="Newsletter Middle Blocks" />
+<div class="newsletter" role="contentinfo" sqs-controller="FooterBreakpoints">
+  <div class="Footer-inner clear">
+    <squarespace:block-field id="newsletterBlocksTop" class="Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" columns="12" label="Newsletter Top Blocks" />
+    <div class="Footer-middle">
+      <squarespace:block-field id="newsletterBlocksMiddle" class="Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="Newsletter Middle Blocks" />
     </div>
-    <squarespace:block-field id="newsletterBlocksBottom" class="News-blocks News-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Newsletter Bottom Blocks" />
+    <squarespace:block-field id="newsletterBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Newsletter Bottom Blocks" />
   </div>
 </div>
