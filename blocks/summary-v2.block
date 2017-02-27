@@ -21,6 +21,9 @@
         showDate:                   boolean
         type:                       number
 ###############################################################################}
+<script>
+    console.log( "archive", {@|json-pretty} );
+</script>
 <section class="Main-content" data-content-field="main-content">
   <div class="articles tweak-site-width-option-full-background tweak-site-width-option-constrained-width">
     <div class="heading"><h1>Post Archive</h1></div>{.end}
