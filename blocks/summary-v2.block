@@ -22,7 +22,7 @@
         type:                       number
 ###############################################################################}
 <script>
-    console.log( "archive", {@|json-pretty} );
+    console.log( "summary-v2", {@|json-pretty} );
 </script>
 <section class="Main-content" data-content-field="main-content">
   <div class="articles tweak-site-width-option-full-background tweak-site-width-option-constrained-width">
