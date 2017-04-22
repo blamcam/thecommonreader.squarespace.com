@@ -49,7 +49,7 @@
                   {.excerpt?}
                     <div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>
                   {.end}
-                  {.section author}<div class="entry-byline"><span class="entry-author vcard">{displayName}</span></div>{.end}
+                  {.author?}<div class="entry-byline"><span class="entry-author vcard">{displayName}</span></div>{.end}
 
                   <div class="Blog-meta Blog-meta--bottom">{@|apply blog-meta.block}</div>
 
