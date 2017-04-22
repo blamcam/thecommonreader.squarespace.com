@@ -3,7 +3,7 @@
 <span class="Blog-meta-item Blog-meta-item--categories">{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" class="Blog-meta-item-category">{@}</a>{.alternates with}, {.end}</span>{.end}
 
 <!--Author-->
-<span class="entry-byline">{author.displayName}</a></span>
+<div class="entry-byline"><a href="{collection.fullUrl}?author={author.id}" class="Blog-meta-item Blog-meta-item--author">{author.displayName}</a></div>
 
 <!--Date-->
 <time class="Blog-meta-item Blog-meta-item--date" datetime="{addedOn|date %F}" itemprop="datePublished">{addedOn|date %B %d, %Y}</time>
