@@ -1,10 +1,13 @@
 <p align="center"><img src ="/screenshot.png" style="width: 200px; height: 200px;"/></p>
 
-A customization of the [Keene](http://keene-demo.squarespace.com) Squarespace template for [rodrigues.ink](http://rodrigues.ink).
+A customization of the [Keene](http://keene-demo.squarespace.com) Squarespace template with some nice tweaks and fleshed out in parts for additional customization; most notably:
+- blocks—__summary-v2__ and other blocks have been unearthed.
+- collections—__blog.item__, __blog.conf__, & __blog.list__ are complete and functional.
+
 In __Developer Mode__ this template can be uploaded to a Squarespace GIT repo.
 
 ### Resources
-- See the [Wells Squarespace Guide](https://support.squarespace.com/hc/en-us/articles/206545647-Using-the-Wells-template) for base features and functions.
+- See the [Brine Squarespace Guide](https://support.squarespace.com/hc/en-us/articles/212512738-Using-the-Brine-template) for base features and functions of the _genus_.
 - For more information about the Squarespace Developer Platform see [developers.squarespace.com](http://developers.squarespace.com).
 - See the [Developer Getting Started](https://developers.squarespace.com/getting-started) page for an step-by-step guide for getting started with the Squaresapce Developer Platform.
 
