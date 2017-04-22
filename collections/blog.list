@@ -33,7 +33,6 @@
 
     <div class="BlogList-item-body">
       {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
-      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
       {##BEGIN}{body}{##END}
     </div>
   </article>
