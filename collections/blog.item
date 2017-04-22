@@ -40,7 +40,7 @@
 
                 <div class="Blog-header-content">
 
-                  <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="Blog-header-content-link" {.passthrough?}target="_blank"{.end}></a>
+                  <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="Blog-header-content-link" {.passthrough?}target="_blank"{.end}>
 
                   <div class="Blog-meta Blog-meta--top">{@|apply blog-meta.block}</div>
 
@@ -49,7 +49,12 @@
                   {.excerpt?}
                     <div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>
                   {.end}
-
+                  {.section author}
+                  <div class="entry-byline">
+                    <span class="entry-author vcard">{displayName}</span>
+                  </div>
+                  {.end}
+                  </a>
                   <div class="Blog-meta Blog-meta--bottom">{@|apply blog-meta.block}</div>
 
                 </div>
