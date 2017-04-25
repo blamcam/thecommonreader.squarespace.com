@@ -40,7 +40,7 @@
         {.end}
 
       </div>
-      {.if website.socialAccounts.0}
+      {.if socialAccounts}
       <div class="Footer-business-social" data-nc-element="social">
         {@|apply social-links.block}
       </div>
