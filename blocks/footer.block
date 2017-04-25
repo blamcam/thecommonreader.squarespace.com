@@ -49,16 +49,10 @@
     <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Footer Bottom Blocks" />
 
     <div class="Footer-bottom">
-      {.section website}
-        {.if socialAccounts}
+      {.if website.socialAccounts.0}
       <div class="Footer-social">
-        <nav class="social">
-          <ul>
-            {.repeated section socialAccounts}<li><a{.if profileUrl} href="{profileUrl}" target="_blank"{.or} title="{screenname}"{.end} class="social-{serviceName}"></a></li>{.end}
-          </ul>
-        </nav>
+        {@|apply social-links.block}
       </div>
-      {.end}
       {.end}
 
       <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />

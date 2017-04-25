@@ -261,13 +261,13 @@
 
   // Alignment
   &.tweak-footer-stacked-alignment-left {
-    .Footer-business, .Footer-nav { text-align: left; }
+    .Footer-business, .Footer-social, .Footer-nav { text-align: left; }
   }
   &.tweak-footer-stacked-alignment-center {
-    .Footer-business, .Footer-nav { text-align: center; }
+    .Footer-business, .Footer-social, .Footer-nav { text-align: center; }
   }
   &.tweak-footer-stacked-alignment-right {
-    .Footer-business, .Footer-nav { text-align: right; }
+    .Footer-business, Footer-social, .Footer-nav { text-align: right; }
   }
 
 }
@@ -302,6 +302,7 @@
     // Paddings
     &-business-info,
     &-business-hours,
+    &-social,
     &-nav-group,
     &-blocks--middle {
       padding: @footer-spacing;
@@ -356,7 +357,7 @@
 
       // Business
       &-business-info,
-      &-business-hours { float: none; }
+      &-business-hours, &-social { float: none; }
 
       // Nav
       &-nav-group {
@@ -388,7 +389,7 @@
       // Business
       &-business { .flex(0 0 auto); }
       &-business-info,
-      &-business-hours { float: none; }
+      &-business-hours, &-social { float: none; }
       &-business-info-item--email { max-width: 100%; }
 
       // Nav
