@@ -40,6 +40,12 @@
         {.end}
 
       </div>
+      {.if website.socialAccounts.0}
+      <div class="Footer-business-social" data-nc-element="social">
+        {@|apply social-links.block}
+      </div>
+      {.end}
+      </div>
 
       <squarespace:block-field id="footerBlocksMiddle" class="Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="Footer Middle Blocks" />
 
