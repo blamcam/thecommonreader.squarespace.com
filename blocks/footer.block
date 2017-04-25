@@ -42,7 +42,7 @@
       </div>
       {.section websiteSettings}
         {.section socialAccounts}
-      <div class="Footer-social" data-nc-element="footerbusinesssocial">
+      <div class="Footer-business-social" data-nc-element="footerbusinesssocial">
         {@|apply social-links.block}
       </div>
       {.end}
