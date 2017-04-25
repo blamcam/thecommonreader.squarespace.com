@@ -40,7 +40,8 @@
         {.end}
 
       </div>
-      {.if website.socialAccounts.0}
+      {.section website}
+        {.if socialAccounts}
       <div class="Footer-business-social">
         <nav class="social">
                <ul>
@@ -48,6 +49,7 @@
                </ul>
              </nav>
       </div>
+      {.end}
       {.end}
       </div>
 
