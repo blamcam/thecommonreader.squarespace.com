@@ -49,11 +49,6 @@
     <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Footer Bottom Blocks" />
 
     <div class="Footer-bottom">
-      {.if website.socialAccounts.0}
-      <div class="Footer-social">
-        {@|apply social-links.block}
-      </div>
-      {.end}
 
       <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
 
