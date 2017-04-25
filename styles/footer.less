@@ -154,11 +154,13 @@
     .tweak-footer-business-social-show & { display: block; }
 
     // Typography
-    @import 'social-icon-font';
-    size: @tweak-footer-business-social-size;
-    color: @tweak-footer-business-social-color;
-    background: @tweak-footer-business-social-overlay-color;
+    background: @tweak-footer-background-color;
     text-align: center;
+    .SocialLinks .SocialLinks-inner {
+      @import 'social-icon-font';
+      size: @tweak-footer-business-social-size;
+      color: @tweak-footer-business-social-color;
+    }
 
   }
 
