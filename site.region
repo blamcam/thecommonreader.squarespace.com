@@ -168,7 +168,6 @@
 
 
       </div>
-      {@|apply newsletter.block}
       {@|apply footer.block}
 
     </div>
