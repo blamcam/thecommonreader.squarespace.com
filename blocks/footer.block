@@ -41,7 +41,7 @@
 
       </div>
       {.section websiteSettings}
-        {.if socialAccounts}
+        {.section socialAccounts}
       <div class="Footer-business-social" data-nc-element="social">
         {@|apply social-links.block}
       </div>

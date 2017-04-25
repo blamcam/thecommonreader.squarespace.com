@@ -104,7 +104,7 @@
       // overflow-y: visible;
       // white-space: nowrap;
       // text-overflow: ellipsis;
-      // [TMP-4273] commented code causes truncation to always occur, and a tiny scrollbar to appear. commenting it out 
+      // [TMP-4273] commented code causes truncation to always occur, and a tiny scrollbar to appear. commenting it out
       // causes the footer to wrap naturally. needs revisiting if footer needs to stay on one line. -schai
       .link-color(@tweak-footer-business-info-color);
 
@@ -142,6 +142,25 @@
 
   }
 
+  // -----------------------------------------
+
+  //  Business Social
+
+
+  &-business-social {
+
+    // Display
+    display: none;
+    .tweak-footer-business-social-show & { display: block; }
+
+    // Typography
+    @import 'social-icon-font';
+    size: @tweak-footer-business-social-size;
+    color: @tweak-footer-business-social-color;
+    background: @tweak-footer-business-social-overlay-color;
+
+
+  }
 
 
 
@@ -343,7 +362,7 @@
       &-business-info,
       &-business-hours { float: none; }
 
-      // Nav 
+      // Nav
       &-nav-group {
         width: 10em;
       }
