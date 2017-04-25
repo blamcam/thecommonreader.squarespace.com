@@ -1,0 +1,161 @@
+
+// =======================================================
+//  ______                    _
+// |  ____|                  | |
+// | |__ ___ _ __  _ __   ___| |
+// |  __/ _ \ '_ \| '_ \ / _ \ |
+// | | |  __/ | | | | | |  __/ |
+// |_|  \___|_| |_|_| |_|\___|_|
+
+
+//  Template:   Wright
+//  Module:     Fennel Footer Style
+//  Contact:    gzhang@squarespace.com
+//  Updated:    2015-10-08
+
+// =======================================================
+
+
+
+// =======================================================
+
+//    Shared
+
+// =======================================================
+
+@newsletter-spacing: 20px;
+
+.newsletter {
+
+  // Background
+  background-color: @tweak-newsletter-color;
+  .font-smoothing(@tweak-newsletter-color);
+
+
+
+
+  // -----------------------------------------
+
+  //  Inner
+
+
+  &-inner {
+
+    .border-box;
+
+    padding: @tweak-newsletter-padding @tweak-site-side-padding;
+    .responsive-padding-vertical(@tweak-newsletter-padding);
+    .responsive-padding-horizontal(@tweak-site-side-padding);
+
+  }
+
+
+
+  // -----------------------------------------
+
+  //  Blocks
+
+  &-blocks {
+
+    &.empty { padding: 0 !important; }
+
+    color: @tweak-footer-body-text-color;
+    .mixin-template-heading-color(@tweak-footer-h1-color, @tweak-footer-h2-color, @tweak-footer-h3-color);
+    .mixin-template-link-color(@tweak-footer-link-color);
+    .mixin-template-line-color(@tweak-footer-line-color);
+
+  }
+
+}
+
+
+// =======================================================
+
+//    Stacked
+
+// =======================================================
+
+
+.tweak-footer-layout-stacked {
+
+  .Footer {
+
+    // Top and bottom blocks spacing
+    &-blocks--top { padding-bottom: @newsletter-spacing; }
+    &-blocks--bottom { padding-top: @newsletter-spacing; }
+
+  }
+
+}
+
+
+// =======================================================
+
+//    Columns
+
+// =======================================================
+
+.tweak-footer-layout-columns {
+
+  .Footer {
+
+    &-inner {
+      overflow: hidden;
+    }
+
+    // Top and bottom blocks spacing
+    &-blocks--top { padding-bottom: @newsletter-spacing * 2; }
+    &-blocks--bottom { padding-top: @newsletter-spacing * 2; }
+
+    // Container
+    &-middle {
+      margin: (-1 * @newsletter-spacing);
+
+      .flex-parent();
+      .flex-direction(row);
+    }
+    // Blocks
+    &-blocks--middle {
+      .flex(0 0 33%);
+      .flex-order(1);
+      &.empty:not(.sqs-editing) { .flex(0 1 0px); }
+    }
+
+
+  }
+
+  // Mid viewport
+  .Footer--mid {
+
+    .Footer {
+
+      // Blocks
+      &-blocks--middle {
+        .flex(0 1 300px);
+        &.empty:not(.sqs-editing) { .flex(0 1 0px); }
+      }
+
+    }
+
+  }
+
+
+  // Compact viewport
+  .Footer--mid.Footer--compact {
+
+    .Footer {
+
+      // Container
+      &-middle {
+        margin: 0;
+        .flex-direction(column);
+      }
+      // Blocks
+      &-blocks--middle { .flex(0 0 auto); }
+
+    }
+
+  }
+
+
+}
