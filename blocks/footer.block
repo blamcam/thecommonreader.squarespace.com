@@ -53,10 +53,10 @@
         {.if socialAccounts}
       <div class="Footer-social">
         <nav class="social">
-               <ul>
-                 {.repeated section socialAccounts}<li><a{.if profileUrl} href="{profileUrl}" target="_blank"{.or} title="{screenname}"{.end} class="social-{serviceName}"></a></li>{.end}
-               </ul>
-             </nav>
+          <ul>
+            {.repeated section socialAccounts}<li><a{.if profileUrl} href="{profileUrl}" target="_blank"{.or} title="{screenname}"{.end} class="social-{serviceName}"></a></li>{.end}
+          </ul>
+        </nav>
       </div>
       {.end}
       {.end}
