@@ -40,17 +40,6 @@
         {.end}
 
       </div>
-      {.section website}
-        {.if socialAccounts}
-      <div class="Footer-business-social">
-        <nav class="social">
-               <ul>
-                 {.repeated section socialAccounts}<li><a{.if profileUrl} href="{profileUrl}" target="_blank"{.or} title="{screenname}"{.end} class="social-{serviceName}"></a></li>{.end}
-               </ul>
-             </nav>
-      </div>
-      {.end}
-      {.end}
       </div>
 
       <squarespace:block-field id="footerBlocksMiddle" class="Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="Footer Middle Blocks" />
@@ -60,6 +49,18 @@
     <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Footer Bottom Blocks" />
 
     <div class="Footer-bottom">
+      {.section website}
+        {.if socialAccounts}
+      <div class="Footer-social">
+        <nav class="social">
+               <ul>
+                 {.repeated section socialAccounts}<li><a{.if profileUrl} href="{profileUrl}" target="_blank"{.or} title="{screenname}"{.end} class="social-{serviceName}"></a></li>{.end}
+               </ul>
+             </nav>
+      </div>
+      {.end}
+      {.end}
+
       <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
 
       <a href="/" class="footer-branding">
