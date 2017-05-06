@@ -241,6 +241,11 @@ input[id^="email-"].field-element {
 /* Bigfoot footnote styles */
 .footnotes {
   .tweak-footnote-font;
+  &::before {
+    content: "NOTES";
+    text-align: center !important;
+    display: block;
+  }
 }
 /* Byline */
 .entry-byline {
