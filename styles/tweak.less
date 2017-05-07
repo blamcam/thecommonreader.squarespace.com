@@ -382,7 +382,7 @@
 //  Fonts
 
 
-// tweak: { "category" : "Main: Content Fonts", "label" : "Body Text", "title" : "tweak-body-font", "type" : "font", "loadAllVariants" : true, "target" : ".Intro:not(.Intro--has-image) .sqs-layout p:not(blockquote), .Main-content .sqs-layout p:not(blockquote)" }
+// tweak: { "category" : "Main: Content Fonts", "label" : "Body Text", "title" : "tweak-body-font", "type" : "font", "loadAllVariants" : true, "target" : ".Intro:not(.Intro--has-image) .sqs-layout p:, .Main-content .sqs-layout p, .Index-page:not(.Index-page--has-image) .sqs-layout p, .Intro--has-image .sqs-layout p, .Index-page--has-image .sqs-layout p, .Footer .sqs-layout p" }
 .tweak-body-font {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -479,8 +479,8 @@
 // tweak: { "category" : "Main: Content Colors", "label" : "Lines", "title" : "tweak-line-color", "type" : "color", "target" : ".Main .sqs-block-horizontalrule, .Intro:not(.Intro--has-image) .sqs-block-horizontalrule, .Index-page:not(.Index-page--has-image) .sqs-block-horizontalrule", "showOnlyWhenPresent" : ".Main .sqs-block-horizontalrule, .Intro:not(.Intro--has-image) .sqs-block-horizontalrule, .Index-page:not(.Index-page--has-image) .sqs-block-horizontalrule" }
 @tweak-line-color: #dddddd;
 
-// tweak: { "category": "Main: Quote Block", "label" : "Quote Font", "title" : "tweak-quote-block-quote-font", "type" : "font", "target" : "blockquote, .Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote,  .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote", "showOnlyWhenPresent" : "blockquote, .Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-html blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-markdown blockquote, .sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote" }
-.tweak-quote-block-quote-font {
+// tweak: { "category": "Main: Quote Block", "label" : "Quote Font", "title" : "tweak-quote-block-font", "type" : "font", "target" : ".Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote,  .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote", "showOnlyWhenPresent" : ".Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-html blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-markdown blockquote, .sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote" }
+.tweak-quote-block-font {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
