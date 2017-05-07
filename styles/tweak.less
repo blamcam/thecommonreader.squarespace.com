@@ -476,9 +476,25 @@
 // tweak: { "category": "Main: Content Colors", "label" : "Links", "title" : "tweak-link-color", "type" : "color", "target" : ".Intro:not(.Intro--has-image) .sqs-layout p, .Main-content .sqs-layout p, .Index-page:not(.Index-page--has-image) .sqs-layout p", "showOnlyWhenPresent" : ".sqs-layout p a" }
 @tweak-link-color: #3bafdA;
 
-// tweak: { "category" : "Main: Content Colors", "label" : "Lines", "title" : "tweak-line-color", "type" : "color", "target" : ".Main .sqs-block-horizontalrule, .Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-horizontalrule, .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-horizontalrule, .Index-page:not(.Index-page--has-image) .sqs-block-html blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-markdown blockquote", "showOnlyWhenPresent" : ".Main .sqs-block-horizontalrule, .Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-horizontalrule, .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-horizontalrule, .Index-page:not(.Index-page--has-image) .sqs-block-html blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-markdown blockquote" }
+// tweak: { "category" : "Main: Content Colors", "label" : "Lines", "title" : "tweak-line-color", "type" : "color", "target" : ".Main .sqs-block-horizontalrule, .Intro:not(.Intro--has-image) .sqs-block-horizontalrule, .Index-page:not(.Index-page--has-image) .sqs-block-horizontalrule", "showOnlyWhenPresent" : ".Main .sqs-block-horizontalrule, .Intro:not(.Intro--has-image) .sqs-block-horizontalrule, .Index-page:not(.Index-page--has-image) .sqs-block-horizontalrule" }
 @tweak-line-color: #dddddd;
 
+// tweak: { "category": "Main: Quote Block", "label" : "Quote Font", "title" : "tweak-quote-block-quote-font", "type" : "font", "target" : ".Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote,  .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote", "showOnlyWhenPresent" : ".Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote, , .Index-page:not(.Index-page--has-image) .sqs-block-html blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-markdown blockquote, .sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote"}
+.tweak-quote-block-quote-font {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0em;
+  line-height: 1.6em;
+  text-transform: none;
+}
+
+// tweak: { "category": "Main: Quote Block", "label" : "Quote Border", "title" : "tweak-quote-block-quote-border", "type" : "value", "step" : 1, "min" : 1, "max" : 10, "target" : ".Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote,  .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote", "showOnlyWhenPresent" : ".Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote, , .Index-page:not(.Index-page--has-image) .sqs-block-html blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-markdown blockquote, .sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote" }
+@tweak-quote-block-quote-border: 2px;
+
+// tweak: { "category" : "Main: Quote Border", "label" : "Quote Border Color", "title" : "tweak-quote-block-quote-border-color", "type" : "color", "disableTransparency" : "true", "target" : ".Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote,  .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote", "showOnlyWhenPresent" : ".Main .sqs-block-markdown blockquote, .Main .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-html blockquote, .Intro:not(.Intro--has-image) .sqs-block-markdown blockquote, , .Index-page:not(.Index-page--has-image) .sqs-block-html blockquote, .Index-page:not(.Index-page--has-image) .sqs-block-markdown blockquote, .sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote" }
+@tweak-quote-block-quote-border-color: #dddddd;
 
 // tweak: { "category": "Main: Content Colors", "label" : "Body Text (Overlay)", "title" : "tweak-overlay-body-text-color", "type" : "color", "target" : ".Intro--has-image .sqs-layout p, .Index-page--has-image .sqs-layout p", "showOnlyWhenPresent" : ".Intro--has-image .sqs-layout:not(.empty), .Index-page--has-image .sqs-layout:not(.empty)" }
 @tweak-overlay-body-text-color: #000000;
@@ -495,7 +511,7 @@
 // tweak: { "category": "Main: Content Colors", "label" : "Links (Overlay)", "title" : "tweak-overlay-link-color", "type" : "color", "target" : ".Intro--has-image .sqs-layout p, .Index-page--has-image .sqs-layout p", "showOnlyWhenPresent" : ".Intro--has-image .sqs-layout p, .Index-page--has-image .sqs-layout p" }
 @tweak-overlay-link-color: #00aeef;
 
-// tweak: { "category" : "Main: Content Colors", "label" : "Lines (Overlay)", "title" : "tweak-overlay-line-color", "type" : "color", "target" : ".Intro--has-image .sqs-block-horizontalrule, .Intro--has-image .sqs-block-html blockquote, .Intro--has-image .sqs-block-markdown blockquote, .Index-page--has-image .sqs-block-horizontalrule, .Index-page--has-image .sqs-block-html blockquote, .Index-page--has-image .sqs-block-markdown blockquote", "showOnlyWhenPresent" : ".Intro--has-image .sqs-block-horizontalrule, .Intro--has-image .sqs-block-html blockquote, .Intro--has-image .sqs-block-markdown blockquote, .Index-page--has-image .sqs-block-horizontalrule, .Index-page--has-image .sqs-block-html blockquote, .Index-page--has-image .sqs-block-markdown blockquote" }
+// tweak: { "category" : "Main: Content Colors", "label" : "Lines (Overlay)", "title" : "tweak-overlay-line-color", "type" : "color", "target" : ".Intro--has-image .sqs-block-horizontalrule, .Index-page--has-image .sqs-block-horizontalrule", "showOnlyWhenPresent" : ".Intro--has-image .sqs-block-horizontalrule, .Index-page--has-image .sqs-block-horizontalrule" }
 @tweak-overlay-line-color: #dddddd;
 
 
@@ -933,7 +949,7 @@
 
 // tweak: { "category" : "Quote Block", "label" : "Alignment", "title" : "tweak-quote-block-alignment", "type" : "dropdown", "options" : [ "Left", "Center", "Right" ], "default" : "Center", "target" : ".sqs-block-quote", "showOnlyWhenPresent" : ".sqs-block-quote" }
 
-// tweak: { "category": "Quote Block", "label" : "Quote Font", "title" : "tweak-quote-block-quote-font", "type" : "font", "target" : ".sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote", "showOnlyWhenPresent" : ".sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote"}
+// tweak: { "category": "Quote Block", "label" : "Quote Font", "title" : "tweak-quote-block-quote-font", "type" : "font", "target" : ".sqs-block-quote", "showOnlyWhenPresent" : ".sqs-block-quote" }
 .tweak-quote-block-quote-font {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -944,14 +960,7 @@
   text-transform: none;
 }
 
-// tweak: { "category": "Quote Block", "label" : "Quote Border", "title" : "tweak-quote-block-quote-border", "type" : "value", "step" : 1, "min" : 1, "max" : 10, "target" : ".sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote", ".sqs-block-quote", "showOnlyWhenPresent" : ".sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote" }
-@tweak-quote-block-quote-border: 2px;
-
-// tweak: { "category" : "Site: Border", "label" : "Quote Border Color", "title" : "tweak-quote-block-quote-border-color", "type" : "color", "disableTransparency" : "true", "target" : ".sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote", ".sqs-block-quote", "showOnlyWhenPresent" : ".sqs-block-html blockquote, .sqs-block-markdown blockquote, .sqs-block-quote" }
-@tweak-quote-block-quote-border-color: #dddddd;
-
-
-// tweak: { "category": "Quote Block", "label" : "Source Font", "title" : "tweak-quote-block-source-font", "type" : "font", "target" : "blockquote", ".sqs-block-quote", "showOnlyWhenPresent" : ".sqs-block-quote" }
+// tweak: { "category": "Quote Block", "label" : "Source Font", "title" : "tweak-quote-block-source-font", "type" : "font", "target" : ".sqs-block-quote", "showOnlyWhenPresent" : ".sqs-block-quote" }
 .tweak-quote-block-source-font {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
