@@ -1,9 +1,9 @@
 <div class="newsletter Footer" role="contentinfo" sqs-controller="FooterBreakpoints">
   <div class="newsletter-inner Footer-inner clear">
-    <squarespace:block-field id="newsletterBlocksTop footerBlocksTop" class="newsletter-blocks newsletter-blocks--top Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" columns="12" label="Newsletter Top Blocks" />
+    <squarespace:block-field id="newsletterBlocksTop" class="newsletter-blocks newsletter-blocks--top Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" columns="12" label="Newsletter Top Blocks" />
     <div class="newsletter-middle Footer-middle">
-      <squarespace:block-field id="newsletterBlocksMiddle footerBlocksMiddle" class="newsletter-blocks newsletter-blocks--middle Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="Newsletter Middle Blocks" />
+      <squarespace:block-field id="newsletterBlocksMiddle" class="newsletter-blocks newsletter-blocks--middle Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="Newsletter Middle Blocks" />
     </div>
-    <squarespace:block-field id="newsletterBlocksBottom footerBlocksBottom" class="newsletter-blocks newsletter-blocks--bottom Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Newsletter Bottom Blocks" />
+    <squarespace:block-field id="newsletterBlocksBottom" class="newsletter-blocks newsletter-blocks--bottom Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Newsletter Bottom Blocks" />
   </div>
 </div>
