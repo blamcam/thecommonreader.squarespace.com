@@ -46,6 +46,24 @@
 
     <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Footer Bottom Blocks" />
 
+    <div class="Footer-bottom">
+      {.if website.socialAccounts.0}
+      <div class="Footer-social">
+        {@|apply social-links.block}
+      </div>
+      {.end}
+
+
+      <a href="/" class="footer-branding">
+        <img src="/s/footer_logo.png?format=1500w" alt="{siteTitle}" class="footer-branding-logo" />
+        {.section website}
+          {.section socialLogoImageUrl}
+            <!--<img src="{socialLogoImageUrl}?format=1500w" alt="{siteTitle}" class="footer-branding-logo" />-->
+          {.end}
+        {.end}
+      </a>
+
+    </div>
 
   </div>
 </footer>
