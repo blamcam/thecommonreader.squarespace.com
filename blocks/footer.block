@@ -57,6 +57,14 @@
 
       <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
 
+      <a href="/" class="footer-branding">
+        <img src="/s/footer_logo.png?format=1500w" alt="{siteTitle}" class="footer-branding-logo" />
+        {.section website}
+          {.section socialLogoImageUrl}
+            <!--<img src="{socialLogoImageUrl}?format=1500w" alt="{siteTitle}" class="footer-branding-logo" />-->
+          {.end}
+        {.end}
+      </a>
 
     </div>
 
