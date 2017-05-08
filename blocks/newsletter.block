@@ -1,4 +1,4 @@
-<div class="newsletter" role="contentinfo" sqs-controller="FooterBreakpoints">
+<div class="newsletter Footer" role="contentinfo" sqs-controller="FooterBreakpoints">
   <div class="newsletter-inner Footer-inner clear">
     <squarespace:block-field id="newsletterBlocksTop" class="newsletter-blocks newsletter-blocks--top Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" columns="12" label="Newsletter Top Blocks" />
     <div class="newsletter-middle Footer-middle">
