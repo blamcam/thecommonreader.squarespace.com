@@ -42,6 +42,7 @@
     </div>
 
       <squarespace:block-field id="footerBlocksMiddle" class="Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="Footer Middle Blocks" />
+      <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
     </div>
 
     <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="Footer Bottom Blocks" />
@@ -53,7 +54,6 @@
       </div>
       {.end}
 
-      <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
 
       <a href="/" class="footer-branding">
         <img src="/s/footer_logo.png?format=1500w" alt="{siteTitle}" class="footer-branding-logo" />
