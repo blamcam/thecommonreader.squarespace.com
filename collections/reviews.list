@@ -1,0 +1,70 @@
+{.section tagFilter}
+<p class="active-filter tag-filter">All posts tagged: <span class="active-filter-label">{@|safe}</span></p>
+{.end}
+
+{.if authorFilter}
+<p class="active-filter author-filter"><span class="active-filter-label">{author.displayName|safe}</span></p>
+{.end}
+
+<section class="BlogList BlogList--posts-full sqs-blog-list clear" data-columns="2">
+<!--Category and Tag items List-->
+ {.if categoryFilter}
+ <section class="Main-content" data-content-field="main-content">
+   <div class="articles tweak-site-width-option-full-background tweak-site-width-option-constrained-width">
+     {.section categoryFilter}<div class="heading"><h2>All posts tagged</h2><h1>{@|safe}</h1></div>{.end}
+     <ul>
+       <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
+       {.repeated section items}
+       <li>
+         <div class="postdate">{addedOn|date %B %d, %Y}</div>
+         <a href="{fullUrl}">
+           <div class="hed">{title}</div>
+         </a>
+       </li>
+       {.end}
+       </squarespace:query>
+     </ul>
+   </div>
+ </section>
+ {.or}
+ {.repeated section items}
+  <article id="post-{id}" class="BlogList-item hentry post-type-text article-index-1{.if categories.0} has-categories{.end}{.if tags.0} has-tags{.end}{.if location.addressTitle || location.addressLine1 || location.addressLine2 || location.addressCountry} has-location{.end}{.comments?} has-comments{.end}" data-item-id="{id}" data-offset="{addedOn}"{.if pagination.nextPage}{.or} data-last-page{.end}>
+    <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-item-title" data-content-field="title">{title}</a>
+
+    <div class="BlogList-item-body">
+      {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
+      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
+    </div>
+    <div class="Blog-meta BlogList-item-meta">{@|apply blog-meta.block}</div>
+  </article>
+{.end}
+</section>
+
+{.if pagination}
+  <nav class="BlogList-pagination">
+
+    <!-- newer page -->
+    {.if pagination.prevPage}
+      <a href="{pagination.prevPageUrl}" class="BlogList-pagination-link">
+        <svg class="BlogList-pagination-link-icon" viewBox="0 0 9 16">
+          <g class="svg-icon">
+            <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2 "></polyline>
+          </g>
+        </svg><span class="BlogList-pagination-link-label">Newer</span>
+      </a>
+    {.end}
+
+    <!-- older page -->
+    {.if pagination.nextPage}
+      <a href="{pagination.nextPageUrl}" class="BlogList-pagination-link"><span class="BlogList-pagination-link-label">Older</span>
+        <svg class="BlogList-pagination-link-icon" viewBox="0 0 9 16">
+        <g class="svg-icon">
+          <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7 "></polyline>
+        </g>
+      </svg>
+    </a>
+    {.end}
+
+  </nav>
+  <div class="archive-link"><a href="/archive">Browse the archive→</a></div>
+{.end}
