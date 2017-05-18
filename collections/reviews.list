@@ -13,7 +13,7 @@
    <div class="articles tweak-site-width-option-full-background tweak-site-width-option-constrained-width">
      {.section categoryFilter}<div class="heading"><h2>All posts tagged</h2><h1>{@|safe}</h1></div>{.end}
      <ul>
-       <squarespace:query collection="blog" category="{categoryFilter}" limit="99" >
+       <squarespace:query collection="reviews" category="{categoryFilter}" limit="99" >
        {.repeated section items}
        <li>
          <div class="postdate">{addedOn|date %B %d, %Y}</div>
