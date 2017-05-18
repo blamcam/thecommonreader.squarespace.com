@@ -616,8 +616,7 @@ a {
 // Main content
 .Main:not(.Main--events-list):not(.Main--events-item):not(.Main--blog-list) .Main-content .sqs-layout,
 // Blog List
-.tweak-blog-list-style-stacked:not(.BlogList--posts-full) .sqs-layout,
-article,
+.tweak-blog-list-style-stacked:not .BlogList--posts-full .sqs-layout,
 // Index pages
 .Index-page .sqs-layout,
 // Footer top and bottom
@@ -690,6 +689,22 @@ article,
 
 // summary-v2 block
 .sqs-block-summary-v2 {
+
+  // Limit excerpt width in stacked mode
+  // to content inset width.
+  .border-box;
+
+  width: @content-inset-width;
+  max-width: 100%;
+  .responsive-content-inset-width;
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+// blog article stuff
+.BlogItem-title, .Blog-meta, .Blog-header-image {
 
   // Limit excerpt width in stacked mode
   // to content inset width.
