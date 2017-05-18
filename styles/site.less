@@ -656,7 +656,7 @@ a {
 
 //  Blog
 
-.tweak-blog-list-style-stacked .BlogList-item-excerpt, .sqs-block-summary-v2 .summary-excerpt {
+.tweak-blog-list-style-stacked .BlogList-item-excerpt {
 
   // Limit excerpt width in stacked mode
   // to content inset width.
@@ -687,7 +687,21 @@ a {
 
 }
 
+// summary-v2 block
+.sqs-block-summary-v2 {
 
+  // Limit excerpt width in stacked mode
+  // to content inset width.
+  .border-box;
+
+  width: @content-inset-width;
+  max-width: 100%;
+  .responsive-content-inset-width;
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
 
 // -----------------------------------------
 
