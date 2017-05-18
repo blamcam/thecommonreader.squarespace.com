@@ -1,4 +1,4 @@
-<!-- blog.item -->
+<!-- reviews.item -->
 {.section item}
 
   <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
@@ -111,4 +111,4 @@
   </nav>
   <div class="archive-link"><a href="/archive">Browse the archive→</a></div>
 {.end}
-<!-- end blog.item -->
+<!-- end reviews.item -->

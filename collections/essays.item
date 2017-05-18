@@ -1,11 +1,11 @@
-
+<!-- essays.item -->
 {.section item}
 
   <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
     <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
     <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
-      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
     {body}
+    {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
     {.section categories}
     <div class="blog-categories">
       <ul class="tags">
@@ -111,3 +111,4 @@
   </nav>
   <div class="archive-link"><a href="/archive">Browse the archive→</a></div>
 {.end}
+<!-- end essays.item -->
