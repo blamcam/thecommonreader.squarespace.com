@@ -1,4 +1,4 @@
-<!-- blog.item -->>
+<!-- blog.item -->
 {.section item}
 
   <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
