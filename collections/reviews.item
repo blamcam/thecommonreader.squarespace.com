@@ -1,64 +1,23 @@
-
+<!-- blog.item -->>
 {.section item}
 
-  <article id="article-{id}" class="BlogItem-article {@|item-classes}{.passthrough?} BlogItem-article--passthrough{.end}{.if starred} BlogItem-article--featured{.or} BlogItem-article--not-featured{.end}{.main-image?} BlogItem-article--has-main-image{.or} BlogItem-article--no-main-image{.end}{.if categories.0} has-categories{.end}{.if tags.0} has-tags{.end}{.if location.addressTitle || location.addressLine1 || location.addressLine2 || location.addressCountry} has-location{.end}{.comments?} has-comments{.end}" data-item-id="{id}">
-
-    <header class="Blog-header{.main-image?} Blog-header--has-image{.end} BlogItem-header">
-
-      <div class="Blog-header-content">
-
-        {.passthrough?}
-          <a href="{sourceUrl}" class="Blog-header-content-link" target="_blank"></a>
-        {.end}
-
-        <div class="Blog-meta Blog-meta--top">{@|apply blog-meta.block}</div>
-
-        <h1 class="Blog-title Blog-title--item" data-content-field="title" itemprop="headline">{title}</h1>
-
-        <div class="Blog-meta Blog-meta--bottom">{@|apply blog-meta.block}</div>
-
-      </div>
-
+  <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
+    <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
+    <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
       {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
-
-    </header>
-
-    <section class="BlogItem-main">
-
-      {body}
-
-      {.section author}
-        <div class="BlogItem-profile">
-
-          <div class="BlogItem-profile-inner">
-
-            {.if avatarId}
-              <div class="BlogItem-profile-avatar content-fill" sqs-controller="Template.Controllers.SimpleImageLoad">
-                <img class="BlogItem-profile-avatar-image" data-src="{avatarAssetUrl}" data-image="{avatarAssetUrl}" data-image-focal-point="0.5,0.5" data-load="false">
-              </div>
-            {.end}
-
-            {.section displayName}<div class="BlogItem-profile-name" itemprop="author">{@}</div>{.end}
-
-            {.section bio}<div class="BlogItem-profile-bio">{@}</div>{.end}
-
-          </div>
-
-        </div>
-      {.end}
-
-      {@|apply sqs-share-buttons}
-
-      {.if postItemInjectCode}{postItemInjectCode}{.end}
-
-      <div id="comments-{id}" class="BlogItem-comments">
-
+    {body}
+    {.section categories}
+    <div class="blog-categories">
+      <ul class="tags">
+        {.repeated section @}<li><a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a></li>{.end}
+      </ul>
+    </div>
+    {.end}
+    <div class="BlogItem-share">{@|apply sqs-share-buttons}</div>
+    {.if postItemInjectCode}{postItemInjectCode}{.end}
+    <section id="comments-{id}" class="BlogItem-comments">
         {@|comments}
-
-      </div>
-
     </section>
-
   </article>
 
 {.end}
@@ -90,7 +49,6 @@
                   {.excerpt?}
                     <div class="Blog-excerpt" data-content-field="excerpt">{excerpt}</div>
                   {.end}
-
                   <div class="Blog-meta Blog-meta--bottom">{@|apply blog-meta.block}</div>
 
                 </div>
@@ -153,3 +111,4 @@
   </nav>
   <div class="archive-link"><a href="/archive">Browse the archive→</a></div>
 {.end}
+<!-- end blog.item -->

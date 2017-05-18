@@ -1,3 +1,4 @@
+<!-- start blog.list -->
 {.section tagFilter}
 <p class="active-filter tag-filter">All posts tagged: <span class="active-filter-label">{@|safe}</span></p>
 {.end}
@@ -68,3 +69,4 @@
   </nav>
   <div class="archive-link"><a href="/archive">Browse the archive→</a></div>
 {.end}
+<!-- end blog.list -->
