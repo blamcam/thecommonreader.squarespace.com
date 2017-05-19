@@ -53,7 +53,7 @@
 
                 </div>
 
-                {.main-image?}<figure class="Blog-header-image content-fill"><img {@|image-meta} data-load="false" /></figure>{.end}
+                {.main-image?}<figure class="Blog-header-image content-fill"><img {@|image-meta} src="{ImageUrl}?format=300w" data-load="false" /></figure>{.end}
 
               </div>
 
