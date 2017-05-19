@@ -300,13 +300,13 @@
   }
 
   // No image background
-  background-color: @tweak-blog-background-color;
-  .font-smoothing(@tweak-blog-background-color);
+  background-color: @tweak-blog-list-header-background-color;
+  .font-smoothing(@tweak-blog-list-header-background-color);
 
   // HOVER
   .transition(background-color 160ms ease-out);
   .BlogList-item:not(.Blog-header--has-image):hover &,
-  .BlogItem-article--passthrough:not(.Blog-header--has-image):hover & { background-color: darken(@tweak-blog-background-color, 10%); }
+  .BlogItem-article--passthrough:not(.Blog-header--has-image):hover & { background-color: darken(@tweak-blog-list-header-background-color, 10%); }
 
 }
 
