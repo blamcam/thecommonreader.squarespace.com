@@ -33,7 +33,8 @@
     <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-item-title" data-content-field="title">{title}</a>
 
     <div class="BlogList-item-body sqs-gallery-image-container">
-      {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} src="{ImageUrl}?format=300w" data-load="false" /></figure>{.end}{excerpt}</div>{.end}
+      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} src="{ImageUrl}?format=300w" data-load="false" /></figure>{.end}
+      {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
     </div>
     <div class="Blog-meta BlogList-item-meta">{@|apply blog-meta.block}</div>
   </article>
