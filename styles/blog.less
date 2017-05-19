@@ -275,8 +275,8 @@
 
 
 
-@blog-header-overlay-color-alpha-full: rgba(red(@tweak-blog-list-header-overlay-color), green(@tweak-blog-list-header-overlay-color), blue(@tweak-blog-list-header-overlay-color), 1);
-@blog-header-overlay-color-alpha-fifth: rgba(red(@tweak-blog-list-header-overlay-color), green(@tweak-blog-list-header-overlay-color), blue(@tweak-blog-list-header-overlay-color), 0.5 * alpha(@tweak-blog-list-header-overlay-color));
+@blog-header-overlay-color-alpha-full: rgba(red(@tweak-overlay-color), green(@tweak-overlay-color), blue(@tweak-overlay-color), 1);
+@blog-header-overlay-color-alpha-fifth: rgba(red(@tweak-overlay-color), green(@tweak-overlay-color), blue(@tweak-overlay-color), 0.5 * alpha(@tweak-overlay-color));
 
 
 
@@ -355,7 +355,7 @@
       // opacity = alpha of overlay color
 
       background-color: @blog-header-overlay-color-alpha-full;
-      opacity: alpha(@tweak-blog-list-header-overlay-color)
+      opacity: alpha(@tweak-overlay-color)
 
     }
 
@@ -366,7 +366,7 @@
       // using rgba, since CSS gradients don't
       // support transitions currently.
 
-      opacity: alpha(@tweak-blog-list-header-overlay-color);
+      opacity: alpha(@tweak-overlay-color);
 
     }
 
@@ -377,14 +377,14 @@
     // Gradient origin depends on user-selected
     // direction.
 
-    .tweak-blog-header-overlay-fade.tweak-blog-header-overlay-origin-top &    { .vertical-linear-gradient(@tweak-blog-list-header-overlay-color, @blog-header-overlay-color-alpha-fifth); }
-    .tweak-blog-header-overlay-fade.tweak-blog-header-overlay-origin-bottom & { .vertical-linear-gradient(@blog-header-overlay-color-alpha-fifth, @tweak-blog-list-header-overlay-color); }
+    .tweak-blog-header-overlay-fade.tweak-blog-header-overlay-origin-top &    { .vertical-linear-gradient(@tweak-overlay-color, @blog-header-overlay-color-alpha-fifth); }
+    .tweak-blog-header-overlay-fade.tweak-blog-header-overlay-origin-bottom & { .vertical-linear-gradient(@blog-header-overlay-color-alpha-fifth, @tweak-overlay-color); }
 
 
     // HOVER
     .transition(opacity 160ms ease-out);
     .BlogList-item:hover &,
-    .BlogItem-article--passthrough:hover  { opacity: alpha(@tweak-blog-list-header-overlay-color) + 0.1; }
+    .BlogItem-article--passthrough:hover  { opacity: alpha(@tweak-overlay-color) + 0.1; }
 
   }
 
