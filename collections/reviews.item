@@ -5,7 +5,7 @@
     <h1 class="BlogItem-title" data-content-field="title" itemprop="headline">{title}</h1>
     <div class="Blog-meta BlogItem-meta">{@|apply blog-meta.block}</div>
     {body}
-    {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} src="{ImageUrl}?format=300w" data-load="false" /></figure>{.end}
+    {.main-image?}<a href="{sourceUrl}" class="Blog-header-content-link" target="_blank"><figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} src="{ImageUrl}?format=300w" data-load="false" /></figure></a>{.end}
     {.section categories}
     <div class="blog-categories">
       <ul class="tags">
