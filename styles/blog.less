@@ -1459,7 +1459,7 @@
   }
 
   .tweak-blog-item-header-full-bleed.tweak-site-border-show & {
-    .mixin-full-bleed-height(@tweak-site-background-color, @tweak-site-border-color);
+    .mixin-full-bleed-height(@tweak-site-body-background-color, @tweak-site-border-color);
   }
 
 }
@@ -1937,8 +1937,8 @@
         padding: 16px 24px;
 
         // Background color
-        background: @tweak-site-background-color;
-        .font-smoothing(@tweak-site-background-color);
+        background: @tweak-site-body-background-color;
+        .font-smoothing(@tweak-site-body-background-color);
 
         // Transition
         opacity: 0;
