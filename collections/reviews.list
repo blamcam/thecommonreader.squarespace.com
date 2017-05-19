@@ -34,7 +34,7 @@
 
     <div class="BlogList-item-body">
       {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
-      {.main-image?}<div class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} src="{ImageUrl}?format=300w" data-load="false" /></figure>{.end}
+      {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} src="{ImageUrl}?format=300w" data-load="false" /></figure>{.end}
     </div>
     <div class="Blog-meta BlogList-item-meta">{@|apply blog-meta.block}</div>
   </article>
