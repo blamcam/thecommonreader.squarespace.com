@@ -35,7 +35,9 @@
       <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-item-title" data-content-field="title">{title}
       {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} src="{ImageUrl}?format=200w" data-load="false" /></figure>{.end}
       </a>
-      {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
+      {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}
+        <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-read-more-link"></a>
+      </div>{.end}
     </div>
   </article>
 {.end}
