@@ -1,5 +1,5 @@
 <div class="newsletter" role="contentinfo" sqs-controller="FooterBreakpoints">
-  <div class="newsletter-inner Footer-inner clear">
+  <div class="newsletter-inner">
     <squarespace:block-field id="newsletterBlocksTop" class="newsletter-blocks newsletter-blocks--top Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" columns="12" label="Newsletter Top Blocks" />
     <div class="newsletter-middle Footer-middle">
       <squarespace:block-field id="newsletterBlocksMiddle" class="newsletter-blocks newsletter-blocks--middle Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="Newsletter Middle Blocks" />
