@@ -79,7 +79,7 @@ nav.Footer-nav {
 
 .sqs-block-summary-v2 .summary-read-more-link, .BlogList-item .BlogList-read-more-link {
   &:before {
-    content: 'Read more...';
+    content: 'Read more ';
     .tweak-read-more-font;
     display: inline-block;
     //border: 1px solid @tweak-site-border-color;
@@ -91,7 +91,7 @@ nav.Footer-nav {
   }
   &:after {
     content: "\f105";
-    font-family: FontAwesome;
+    .tweak-read-more-font & {font-family: FontAwesome;}
   }
 }
 
