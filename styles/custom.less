@@ -78,7 +78,7 @@ nav.Footer-nav {
 }
 
 .sqs-block-summary-v2 .summary-read-more-link, .BlogList-item .BlogList-read-more-link {
-  &:after {
+  &:before {
     content: 'Read more...';
     .tweak-read-more-font;
     display: inline-block;
@@ -88,6 +88,10 @@ nav.Footer-nav {
     //padding: 5px 10px!important;
     white-space: nowrap;
     //line-height: 1em;
+  }
+  &:after {
+    content: "\f105";
+    font-family: FontAwesome;
   }
 }
 
