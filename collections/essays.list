@@ -36,7 +36,7 @@
     </div>
     <div class="Blog-meta BlogList-item-meta">{@|apply blog-meta.block}</div>
   </article>
-  <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-read-more-link"></a>
+  <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-read-more-link">Read</a>
 {.end}
 </section>
 
