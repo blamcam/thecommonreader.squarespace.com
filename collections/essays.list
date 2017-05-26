@@ -34,8 +34,8 @@
     <div class="BlogList-item-body">
       {.excerpt?}<div class="BlogList-item-excerpt" data-content-field="excerpt">{excerpt}</div>{.end}
       {.main-image?}<figure class="Blog-header-image content-fill" sqs-controller="Template.Controllers.SimpleImageLoad"><img {@|image-meta} data-load="false" /></figure>{.end}
+      <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-read-more-link"></a>
     </div>
-    <a href="{.passthrough?}{sourceUrl}{.or}{fullUrl}{.end}" class="BlogList-read-more-link"></a>
     <div class="Blog-meta BlogList-item-meta">{@|apply blog-meta.block}</div>
   </article>
 {.end}
