@@ -55,7 +55,7 @@
     <div class="Footer-bottom">
 
 
-      <a href="/" class="footer-branding">
+      <a href="https://www.rodrigues.ink" class="footer-branding">
         <img src="/s/footer_logo.png?format=1500w" alt="{siteTitle}" class="footer-branding-logo" />
         {.section website}
           {.section socialLogoImageUrl}
